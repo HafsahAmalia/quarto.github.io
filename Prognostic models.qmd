@@ -1,0 +1,252 @@
+---
+title: "Meta-analysis of prognostic studies"
+author: "Thomas Debray, PhD"
+format:
+  pptx:
+    reference-doc: custom6.potx
+    logo: logo2.png
+---
+
+## Numerous models for same target population + outcomes
+
+- $>$ 300 models for predicting cardiovascular disease
+- $>$ 100 models for brain trauma patients
+- $>$ 100 diabetes type 2 models
+- $>$ 60 models for breast cancer prognosis
+
+## Need for systematic reviews
+
+Abundance of CPMs, with poor understanding of
+
+- The comparative performance of these CPMs
+- The consistency of effects and risk estimates across CPMs
+- The clinical impact of these CPMs
+
+Systematic review of validation studies may help to identify promising models and evaluate the need for further improvements.
+
+## Why do we need meta-analysis?
+
+Quantitative synthesis (meta-analysis) may help
+
+- To summarize the predictive performance of a CPM
+- To evaluate whether a CPM yields consistently good performance across different populations, outcomes etc
+- To identify possible improvements of CPMs
+- To establish boundaries of applicability and generalizability
+
+## Is it even possible?
+
+- Validation studies are increasingly common!*E.g. Framingham, EuroSCORE, Gail, …*
+- Reporting of validation studies is steadily improving!*E.g. due to reporting guidelines (TRIPOD)*
+
+## Is it even possible?
+```{r , echo=FALSE, out.width = '100%'}
+knitr::include_graphics("Picture 1.png")
+```
+
+## Is it even possible?
+```{r , echo=FALSE, out.width = '100%'}
+knitr::include_graphics("Picture 2.png")
+```
+
+## Guidance paper
+
+```{r , echo=FALSE, out.width = '100%', fig.cap='**Ref**: https://doi.org/10.1136/bmj.i6460'}
+knitr::include_graphics("Picture 3.png")
+```
+
+## Required steps of the meta-analysis
+
+1. Well formulated systematic review question
+2. Extensive search
+3. Selection & data extraction
+4. Critical appraisal
+5. Data synthesis \
+*Pooling of CPM performance*
+6. Interpretation of results \
+*Confidence & prediction intervals, meta-regression, subgroup analysis, sensitivity analyses*
+
+# Data extraction
+
+## Recap: what are validation studies?
+- Apply the CPM to new individuals
+
+  - Internal validation 
+  - Temporal validation 
+  - Geographical validation
+  - Domain validation
+
+- Evaluate the predictive accuracy
+
+  - Overall performance
+  - Calibration
+  - Discrimination
+  
+## Discrimination
+Quantifies the model’s extent to distinguish between events and non-events
+
+- Visual inspection
+
+  - Receiving Operating Characteristics (ROC) curve
+
+- Summary statistics
+
+  - Concordance  (c) index
+  - Area under the ROC curve (AUC)
+  - Discrimination slope
+
+## Calibration
+Agreement between observed outcomes and predictions
+```{r , echo=FALSE, out.width = '37%', fig.cap='**Ref**: Genders et al. Prediction model to estimate presence of coronary artery disease: retrospective pooled analysis of existing cohorts. BMJ 2012'}
+knitr::include_graphics("Picture 4.jpg")
+```
+
+## How to obtain the c-statistic?
+
+- Area under the receiver operating characteristic curve
+- Somer’s D statistic
+- Cohen’s effect size
+- Distribution of the prognostic index (PI)
+- Log odds ratio of the PI
+
+
+The SE can be derived from
+
+- Confidence interval
+- Sample size, total #events and c-statistic
+
+
+## How to obtain the total O:E ratio?
+- Total number of patients
+- Total number or proportion of observed events
+- Total number or proportion of predicted events
+- Predicted risk for the “average” patient
+
+The SE can be derived from the total number of observed and expected events.
+
+## Software
+
+**The metamisc R package **
+
+```{r , echo=FALSE, out.width = '80%'}
+knitr::include_graphics("Picture 5.png")
+```
+
+## Software
+
+**The metamisc R package **
+
+::: {style="font-size:35px"}
+- Estimation of performance statistics and corresponding standard errors from reported quantities
+- Transformation of performance estimates and corresponding standard errors
+- Meta-analysis & meta-regression
+  - Frequentist (via metafor)
+  - Bayesian (via JAGS)
+- Visualization of results
+- https://CRAN.R-project.org/package=metamisc
+
+:::
+
+# Meta-analysis of validation studies
+
+## Fixed effect or random effects?
+
+::: {style="font-size:36px"}
+Homogeneous model performance often unrealistic
+
+- Model discrimination varies according to case-mix heterogeneity *(e.g. primary vs. secondary care)*
+- Model calibration varies according to outcome occurrence
+- Model performance may vary due to covariates not included by the model
+- Model performance may vary due to differences in study design
+- Model performance may vary due to differences in treatment standards
+
+:::
+
+## Fixed effect or random effects?
+Homogeneous model performance often unrealistic
+
+- Heterogeneity in the predictive performance of a CPM is to be expected!
+- Ignoring such heterogeneity leads to an overly precise summary estimate
+- Pooled estimates of model performance have little value when there is strong heterogeneity
+
+## Fixed effect or random effects?
+::: {style="font-size:36px"}
+Traditional meta-analysis methods approximate within-study variability with a Normal distribution
+
+This approximation may introduce bias or show other poor statistical properties when
+
+- The c-statistic or O:E ratio is close to 0 or 1
+- When sample sizes are relatively small
+
+
+**Need for transformations!**
+
+- Meta-analysis of logit c-statistic
+- Meta-analysis of log O:E ratio
+:::
+
+## Use of appropriate meta-analysis methods
+
+**Individual participant data (IPD) meta-analysis**
+
+```{r , echo=FALSE, out.width = '85%', fig.align='center'}
+knitr::include_graphics("Picture 6.png")
+```
+
+## Investigating heterogeneity 
+**Meta-regression**
+
+Adjust the meta-analysis for study-level variables such as:
+
+- Study characteristics
+  - Study design
+  - Follow-up time
+  - Predictor- and outcome definitions
+  - Cut-point for dichotomizing prognostic factor
+  
+## Investigating heterogeneity 
+**Meta-regression**
+
+- Population characteristics
+  - Mean of linear predictor or individual covariates
+  - SD of linear predictor or individual covariates
+  - Treatment standards (beware of ecological fallacy)
+  
+\
+**Ref**: Berlin et al. Individual patient- versus group-level data meta-regressions of treatment effect modifiers: ecological bias rears its ugly head. Stat Med 2002.
+
+
+## Investigating heterogeneity {.smaller}
+**Sensitivity analysis**
+
+Exclude studies of questionable quality *(cfr. PROBAST)*
+
+- Risk of bias
+  - Participant selection
+  - Predictors
+  - Outcome
+  - Sample size and participant flow
+  - Analysis
+  
+## Investigating heterogeneity {.smaller}
+**Sensitivity analysis**
+
+- Applicability
+  - Participant selection
+  - Predictors
+  - Outcome
+
+## Interpretation of meta-analysis results
+
+**Describe model generalizability**
+
+- Evaluate model robustness when applied in new populations
+  - Pooled estimate and 95% CI
+  - Prediction interval
+
+- Identify populations where model performance is satisfactory and others where it is inadequate
+
+
+
+
+
+
