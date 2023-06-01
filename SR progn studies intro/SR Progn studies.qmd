@@ -1,0 +1,495 @@
+---
+title: "Systematic reviews of prognostic studies"
+author: "Karel GM Moons, Lotty Hooft, Thomas Debray"
+format: revealjs
+engine: knitr
+---
+
+## Systematic review (SRs)
+
+- Applicable to all fields of medical research
+
+  - Therapeutic studies (RCTs): Cochrane Intervention Reviews 
+  - Diagnostic accuracy studies: Cochrane Diagnostic Test Accuracy Reviews
+  
+      - Both including meta-analytical approaches
+
+- Next: prognostic studies – this week
+
+![](Picture 1.png){width=100% height=200}
+
+## Prognostic review course
+
+- Increasing interest in and demand for the evaluation of prognostic factors, biomakers & models 
+- Growing number of primary studies
+- Reviews more challenging: more variation in questions, designs, effect measures, analyses
+- Several recent methodological developments & remaining challenges
+
+## Key course objectives
+
+1. To know the main types of prognostic studies
+2. To understand the different aims of systematic reviews of (prognostic) prediction modeling studies
+3. To describe the similarities and differences between intervention and prediction modeling reviews
+4. Assess the risk of bias and concerns about applicability of results from primary studies
+5. To perform quantitative synthesis of published evidence
+
+## Knowledge assumed
+
+- Key features of prognostic research
+- Main steps & methods in a systematic (intervention) review 
+
+  - searching
+  - risk of bias assessment (RCT)
+  - fixed and random effects pooling
+
+# Introduction to SR of prognostic studies
+
+## Group exercise – 10 minutes{#color-slide}
+
+```{css, echo=FALSE}
+#color-slide h2 {
+ color: red;
+}
+```
+
+1. What is prognosis?
+2. Why do we prognosticate?
+3. Types of prognosis studies?
+
+## Answer{#color-slide}
+
+```{css, echo=FALSE}
+#color-slide h2 {
+ color: red;
+}
+```
+
+<span style="color:blue;">Forecast</span> of the <span style="color:blue;">course</span> and <span style="color:blue;">outcome</span> for an <span style="color:blue;">individual</span> in a <span style="color:blue;">certain health state</span> (given a <span style="color:blue;">specific treatment</span> management)
+
+  - Not necessarily sick people
+  
+- More technical: probable course or prediction of specific future outcomes in subjects with certain health condition
+
+- Disease does not have a prognosis an individual does
+
+**Ref**:<span style="color:blue;"> (BMJ series 2009 (Altman, Moons, Royston, Vergouwe) + Progress series BMJ/Plos Med 2013</span>
+
+## Answer{#color-slide}
+
+```{css, echo=FALSE}
+#color-slide h2 {
+ color: red;
+}
+```
+
+Why prognosticate:
+
+- To provide information to patients
+- Identify target groups for treatment or other management – including abstine 
+- To target specific prognostic factors that modify treatment effects
+- Select high/low risk patients for inclusion in RCTs
+- Adjust for case-mix differences in comparison of institutes
+
+## Answer {#color-slide}
+
+```{css, echo=FALSE}
+#color-slide h2 {
+ color: red;
+}
+```
+
+::: {style="font-size: 0.8em"}
+
+<span style="color:blue;">Types of prognosis studies?</span>
+
+PROGRESS series 2013: BMJ and Plos Med</span>
+
+1. Average/overall prognosis: 'What is most likely course (outcome) of individuals in certain health condition (often certain disease)?’
+
+2. Prognostic factor studies: 'Which factors are associated with specific outcome in individuals with certain health condition?
+
+3. Prognostic modeling studies: ‘What combination of prognostic factors predict, and how well, a certain outcome in individuals with  a certain health condition?’
+
+4. Treatment selection factors: ‘Which factors lead to/predict different treatment effect/response in individuals to be treated?’  
+
+<span style="color:red;">Focus on 2 +3</span>
+
+:::
+
+## Why SRs Prognostic studies?
+
+1. Number of studied prognostic factors increases per day
+
+-   Biomarkers (all types -> high throughput studies)
+
+![](Picture 2345.png){width=70% height=200}
+
+
+- Also prognostic models 
+
+![](Picture 6.png){width=40% height=150}
+
+## Why SRs Prognostic studies?
+
+2. Most studies conflicting results 
+
+    - much more than in therapeutic trials and in diagnostic test accuracy studies
+    - **Non-randomised (often not predesigned studies)**
+    - **Often retrospective  using existing data sets**
+
+3. Relatively small studies (compared to therapeutic studies)
+
+    - Kyzas Eur J Canc 2007; > 1500 studies cancer prognostic markers in 2005 -> largest just over 1000 pts.
+
+## Hence…
+
+… prognostic/prediction studies are hot 
+
+… SR’s and notably MA of prognostic studies as well 
+
+    - highly desired and well received by journals/policy makers
+    - to systematically summarise the existing evidence in the field
+	
+## Prognostic Factor Studies
+
+Aim:
+
+- To identify factors associated with  subsequent outcomes in subjects with certain health condition
+- Not necessarily sick (patients)
+- Independent predictors
+
+## Prognostic Factor Study Example
+
+![](Picture 7.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+
+Adopted from: Fletcher & Fletcher, Clinical Epidemiology – The Essentials. Chapter 6. Williams & Wilkins, Baltimore. 1996
+
+:::
+
+## Recall 4 types of prognosis studies?
+
+PROGRESS series 2013: BMJ and Plos Med
+
+3. Prognostic modeling studies: ‘What combination of prognostic factors predict, and how well, a certain outcome in individuals with  a certain health condition?’
+
+## SRs of Prediction Modelling Studies
+
+<span style="color:red;">Group exercise  - 15 minutes</span>
+
+1. What is a prediction model, and what is the difference with a multivariable analysis of multiple  prognostic factors?
+2. Which are the two main types of prediction models?
+3. What is the big difference between these two?
+4. There are three phases of prediction modelling – which three?
+5. What is the biggest difference between phase 1+2 versus 3?
+
+## SRs of Prediction Modelling Studies
+
+<span style="color:red;">Answers</span>
+
+::: {style="font-size: 0.8em"}
+
+- Risk prediction = foreseeing / foretelling
+
+	… (probability) of something that is yet unknown
+
+- Combination of 2 or more predictors that convert predictor values into an absolute probability of … 
+
+	…presence of disease/result of reference test – diagnostic prediction model
+	
+	…future occurrence of certain outcome – prognostic prediction models
+
+A prediction model is developed for use in new individuals  to estimate their (diagnostic or prognostic) probability. Focus is on accuracy of entire model (discrimination + calibration). Factors of the model not at interest.
+
+Multivariable analysis of prognostic factors not focus on model, but rather on which are independent predictors – Focus is on the HRs of the factors (ideally adjusted HRs)
+
+:::
+
+
+## Answers
+
+![](Picture 8.png){width=85%}
+![](Picture 9.png){width=85%}
+
+## 3 Phases of Prediction Modelling studies 
+
+<span style="color:blue;">BMJ series 2009/Bouwmeester 2012/PROGRESS series 2013 (BMJ/Plos Med)</span>
+
+::: {style="font-size: 0.8em"}
+
+1. Model development studies – to develop prediction model from data: identify important predictors; estimate predictor weights; construct model for individualised predictions; quantify predictive performance; internal validation
+2. Model validation studies –  test (validate) predictive performance of previously developed model in participant data other than development set 
+3. Model impact studies – quantify effect/impact of actually using model on participant/physician management and health outcomes – relative to not using the model
+
+:::
+
+What is the difference between 3 versus 1 and 2?
+
+## 3 Phases of Prediction Modelling studies 
+
+<span style="color:blue;">BMJ series 2009/Bouwmeester 2012/PROGRESS series 2013 (BMJ/Plos Med)</span>
+
+::: {style="font-size: 0.8em"}
+
+- Big difference = 3 are comparative studies -> ideally randomised
+- 1 and 2 are by definition single cohort studies- no inherent comparison
+- 3 are thus ideally RCTs – for SRs of prediction model impact studies use the Cochrane tools available for RCTs of intervention studies
+- This course provides tool for prediction model development and validation studies (type 1 and 2)
+
+:::
+
+## ...
+
+Everything we say from here on also applies to SRs of diagnostic prediction modelling studies
+
+\
+
+You need no separate course for that!
+
+We use generic term: prediction model
+
+\
+
+Interesting and booming field – stay in it!
+
+## Prediction models are hot
+
+![](Picture 10.png){width=70%}
+
+::: {style="font-size: 0.5em"}
+
+<span style="color:blue;">(("prognostic model") OR ("prediction model") OR ("risk score") OR ("clinical prediction rule") OR ("decision rule") OR ("prognostic index") OR ("prognostic indices") OR ("prediction index") OR ("risk algorithm") OR ("risk stratification") OR ("multivariable prediction"))</span>
+
+:::
+
+## Conducting a systematic review of prognostic studies
+
+**1. Formulate review question (PICOTS)**
+
+2. Searching and selection for studies
+
+3. Extraction of data (CHARMS)
+
+4. Risk of Bias assessments (QUIPS and PROBAST)
+
+5. Meta-analysis of prognostic factor studies
+
+6. Meta-analysis of prognostic model studies
+
+7. Interpretation and conclusions
+
+# Formulating the review question
+
+## Step 1. Well-formulated review question
+
+Actually: define the PICO -> stands for?
+
+<span style="color:blue;">Guidance frame review question: CHARMS checklist</span>
+
+![](Picture 11.png){width=40%}
+![](Picture 12.png){width=40%}
+
+## Well-formulated review question (PICOTS)
+
+::: {style="font-size: 0.6em"}
+
+| Item                             | Comments                                                                                                                                                              |
+|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|**1. Population**                 | Define target population in which  prediction model(s) under review will be used                                                                                      |
+|**2. Index model(s)**             | Define the prediction model(s) under review                                                                                                                           |
+|**3. Comparator**                 | If applicable, one can review more than one model for the target population and outcome under review                                                                  |
+|**4. Outcome(s) to be predicted** | Define the outcome(s) of interest for the model(s) under review.                                                                                                      |
+|**5. Timing**                     | Define when prediction model(s) under review is intended to be used and over what time period (notably for prognostic prediction models) the outcome(s) is predicted. |
+|**6. Setting**                    | Define the intended role or setting of the prediction model(s) under review.                                                                                          |
+
+:::
+
+## ...
+
+![](Picture 13.png){width=50%}
+
+Different clinical questions possible -> different  aims of SR of prediction models?
+Group exercise: 
+
+- Define a review question + PICOTS --- 15 minutes
+
+## Examples of PICOTS for SR of prediction modeling studies
+
+::: {style="font-size: 0.6em"}
+
+| Item            | Examples                                                                                   |
+|-----------------|--------------------------------------------------------------------------------------------|
+|**Population**   | Women with diagnosed breast cancer                                                         |
+|                 | Healthy adult men in the general population                                                |
+|**Intervention** | Prediction model development without external validation                                   |
+|                 | Prediction model development with external validation in independent data                  |
+|                 | External model validation, possibly with model updating                                    |
+|**Comparator**   | Models to inform physicians’ therapeutic decision making                                   |
+|                 | Models to inform referral to or withholding from invasive diagnostic testing               |
+|**Outcomes**     | Specific future event, such as a fatal or non-fatal coronary heart disease                 |
+|**Timing**       | Event within a specific time interval, such as event within 3 months, 1 year or 10 years   |
+|**Setting**      | Models used preoperatively to predict risk of postoperative complications                  |
+|                 | Models used in asymptomatic adults to detect undiagnosed DM2                               |
+
+:::
+
+## Conducting a systematic review of prognostic studies
+
+::: {style="font-size: 0.6em"}
+
+1. Well-formulated review question (PICOTS)
+
+**2. Extensive search for studies**
+
+3. Objective selection of studies
+4. Objective extraction of data
+5. Critical appraisal of methodological quality
+6. Synthesis of data (meta-analysis)
+7. Interpretation, conclusions, recommendations
+
+:::
+
+![](Picture 14.png){width=70%}
+
+## Search Strategies
+
+
+1. No optimal, reliable methods for searching the literature for prognostic information
+
+      - As for RCTs and Diagnostic Test Accuracy Studies 
+
+2. A few published
+
+      - Altman DG (2001): single prognostic factors
+      - Wong SS (2003): very generic
+      - Ingui BJ (2001): prediction models
+      - Geersing (2012): validation Ingui (2001) and updated (new) search strategy 
+
+## ...
+
+![](Picture 15.png){width=80%}
+
+## Geersing et al 2012 (Conclusions)
+
+- Updated search strategy for prognosis research good in retrieving “Prediction model studies (Se 0.78 to 0.89)
+
+- Less value in retrieving “Predictor Finding/prognostic factor” and “Prediction Model Impact Studies”
+
+
+![](Picture 16.png){width=40%}
+
+- Strategy for “Predictor Finding / prognostic factor” studies still sub-optimal but god starting point!
+
+## Study selection
+
+- Selecting studies involves judgement, and is highly influential on the outcomes of the review
+
+- Two (or more…) reviewers, independently
+
+    - minimizing bias
+    - pilot selection on a few papers first: substantial variation
+    - Determine how will disagreements be managed
+
+- Examine titles and abstracts
+
+- Flow chart of included/excluded studies
+
+- Retrieve and examine full text reports
+
+## Conducting a systematic review of prognostic studies
+
+1. Formulate review question (PICOTS) 
+2. Searching and selection for studies
+
+**3. Extraction of data (CHARMS)**
+
+4. Risk of Bias assessments (QUIPS and PROBAST)
+5. Meta-analysis of prognostic factor studies 
+6. Meta-analysis of prognostic model studies 
+7. Interpretation and conclusions
+
+## CHARMS
+
+- Extraction of characteristics/data of included studies + Critical appraisal
+
+    - CHARMS (Moons et al, Plos Med 2014) – Table 2
+    - 1 domains + signaling questions/items!!
+
+![](Picture 17.png){width=40%}
+
+- Does not exist for prognostic factor studies – though can use CHARMS for that
+
+## Data Extraction Key issues CHARMS checklist
+
+
+![](Picture 18.png){width=100% height=700}
+
+## Critical Appraisal Key issues CHARMS checklist
+
+![](Picture 19.png){width=100% height=700}
+
+## ...
+
+![](Picture 20.png){width=100% height=700}
+
+## ...
+
+![](Picture 21.png){width=100% height=700}
+
+
+## Cochrane PMG title registration form for SRs of prognostic studies
+
+![](Picture 22.png){width=100% height=500}
+
+## Cochrane PMG Protocol Template for SRs of prognostic studies
+
+Available via <span style="color:blue;">http://methods.cochrane.org/prognosis</span> 
+
+![](Picture 23.png){width=100% height=500}
+
+## Intermezzo Challenge  
+
+**Meta-analysis/Pooling of prognostic factor studies**
+
+<span style="color:red;">Exercise 10 minutes:</span>
+
+::: {style="font-size: 0.6em"}
+
+1. Assume this forest plot is of  RCTs on intervention X to prevent outcome Y in patients with disease Z. 
+
+      - Is this pooling ok? 
+      - Why or why not? 
+
+2. Assume this forest plot is of  studies on prognostic factor X, to predict outcome Y in patients with disease Z. 
+
+      - Is this pooling ok? 
+      - Why or why not?
+  
+:::
+
+![](Picture 24.png){width=100% height=250}
+
+## Meta-analysis/Pooling in prognostic factor studies
+
+<span style="color:red;">Answers:</span>
+
+::: {style="font-size: 0.6em"}
+
+- If RCTs
+
+  - Pooling is ok – provided correctly randomised 
+  - Then the 3 HRs are unbiased (provided no other risks of biases) so can easily pool them
+  - Clear effect of intervention X to prevent outcome Y 
+  - In frequentistic world, at alpha 0.05 – even statisitcally significant result. 
+
+- If prognostic factor studies? 
+  
+  - Non randomised  even if a study was based on a arm of a RCT – the prognostic factor analysis is per arm and thus non randomised
+  - Can not assume that the 3 HRs are unbiased
+  - Only pool them if studies have adjusted for the same co-variates – or largely for the same co-variates – e.g. the same big 6 or 7 (the eight co variate probably did not change the HR further)
+  - So pooling of prognostic factor studies only if same adjustment  -- otherwise do stratified pooling (e.g. over studies with similar adjustment)
+
+:::
+
+
