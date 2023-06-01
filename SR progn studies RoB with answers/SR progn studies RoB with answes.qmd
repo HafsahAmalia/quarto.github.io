@@ -1,0 +1,402 @@
+---
+title: " Risk of Bias in systematic reviews of prognostic factor and model studies"
+author: "Karel GM Moons, Lotty Hooft"
+format: revealjs
+engine: knitr
+---
+
+## Conducting a systematic review of prognostic studies
+
+::: {style="font-size: 0.9em"}
+1. Formulate review question (PICOTS) 
+2. Searching and selection for studies
+3. Extraction of data (CHARMS)
+
+**4. Risk of Bias assessments (QUIPS and PROBAST)**
+
+5. Meta-analysis of prognostic factor studies 
+6. Meta-analysis of prognostic model studies 
+7. Interpretation +conclusions
+:::
+
+## Prognostic Factor Studies
+
+![](Picture 1.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+Adopted from: Fletcher & Fletcher, Clinical Epidemiology – The Essentials. Chapter 6. Williams & Wilkins, Baltimore. 1996
+:::
+
+## RoB prognostic factor studies: QUIPS Tool
+
+::: {style="font-size: 0.9em"}
+- Domain-based evaluation + signaling questions/items
+
+    - Follows QUADAS-2, ROBINS-I, RoB-2
+    - Assessments made separately for different bias domains
+    - Requires judgment/knowledge
+    - Based on basic epidemiological principles
+
+- Use of scales “explicitly discouraged”
+
+    - Weighting of items difficult to justify
+    - Often based on reporting rather than conduct
+:::
+
+## Risk of Bias tools
+
+- Prognostic factor/predictor finding studies
+
+    - QUIPS -> J Haydn, Ann Int Med 2006 + 2013
+
+- Prediction model studies (development and validation)
+
+    - PROBAST  – under review (2018)
+    
+## QUIPS  (J Hayden, Ann Int Med 2006 + 2013)
+
+![](Picture 2.png){width=100% height=500}
+
+## Opportunities for Bias
+
+![](Picture 3.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+Adopted from: Fletcher & Fletcher, Clinical Epidemiology – The Essentials. Chapter 6. Williams & Wilkins, Baltimore. 1996
+:::
+
+## Six Opportunities for Bias
+
+1. Study participation
+2. Study attrition
+3. Prognostic factor measurement
+4. Outcome measurement
+5. Covariate measurement & accounting
+6. Analysis & presentation
+
+## 1. Study Participation
+
+![](Picture 4.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+Adopted from: Fletcher & Fletcher, Clinical Epidemiology – The Essentials. Chapter 6. Williams & Wilkins, Baltimore. 1996
+:::
+
+
+## 1. Study Participation
+
+![](Picture 5.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+Adopted from: Fletcher & Fletcher, Clinical Epidemiology – The Essentials. Chapter 6. Williams & Wilkins, Baltimore. 1996
+:::
+
+
+## 2. Study Attrition
+
+![](Picture 6.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+Adopted from: Fletcher & Fletcher, Clinical Epidemiology – The Essentials. Chapter 6. Williams & Wilkins, Baltimore. 1996
+:::
+
+
+## 2. Study Attrition
+
+![](Picture 7b.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+Adopted from: Fletcher & Fletcher, Clinical Epidemiology – The Essentials. Chapter 6. Williams & Wilkins, Baltimore. 1996
+:::
+
+
+## 3. Prognostic Factor Measurement
+
+![](Picture 8.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+Adopted from: Fletcher & Fletcher, Clinical Epidemiology – The Essentials. Chapter 6. Williams & Wilkins, Baltimore. 1996
+:::
+
+
+## 4. Outcome Measurement
+
+![](Picture 9.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+Adopted from: Fletcher & Fletcher, Clinical Epidemiology – The Essentials. Chapter 6. Williams & Wilkins, Baltimore. 1996
+:::
+
+
+## 5. Covariate adjustment
+
+![](Picture 10.png){width=50%}
+
+::: {style="font-size: 0.5em"}
+Adapted from Hayden JA, Côté P, Steenstra IA, Bombardier C, for the QUIPS-LBP Working Group. Identifying phases of investigation helps planning, appraising and applying the results of explanatory prognosis studies. Journal of Clinical Epidemiology. 2008;61(6):552-60.
+:::
+
+
+## 6. Analysis & Presentation
+
+![](Picture 11.png){width=50%}
+
+
+## ...
+
+::: {style="font-size: 0.5em"}
+**Table**: A summary of the bias domains, prompting items and ratings of the QUIPS tool (reproduced from Hayden et al., 201362); a copy of the full QUIPS tool is available at www.annals.org.
+:::
+
+![](Picture 12.png){width=100% height=600}
+
+
+## Practical
+
+![](Picture 13.png){width=100% height=650}
+
+
+## Suggested answers QUIPS practical
+
+- Study Participation – MODERATE
+- Study Attrition – LOW
+- Prognostic Factor Measurement – MODERATE
+- Outcome Measurement – LOW
+- Covariate adjustment – LOW
+- Statistical Analysis and Reporting - LOW
+
+## Problems with risk of bias assessment
+
+- Not as straightforward as it might sound
+- Quality assessment is subjective 
+- Hampered by poor reporting
+- Poor reporting ≠ high risk of bias
+
+
+## Summary: Risk of Bias Assessment using QUIPS
+
+- Approach to assess potential biases in prognostic factor studies
+- Requires operationalization of criteria a priori
+- Requires judgments across items within domains
+- Description of study methods supporting judgments
+
+**Next: What to do with your QUIPS risk of bias assessments? (Afternoon)**
+
+# Prediction Model Studies
+
+## Risk of Bias tools
+
+- Prognostic factor/predictor finding studies
+
+    - QUIPS -> J Haydn, Ann Int Med 2006 + 2013
+
+- Prediction model studies (development and validation)
+
+    - PROBAST  – under review (2018)
+    
+## Prediction Modelling Studies
+
+**Recall**
+
+1. What were again the three phases of prediction modelling
+2. What was the biggest difference between phase 1+2 versus 3?
+3. What were the typical bias problems in prediction model studies – how do these exhibit themselves?
+
+
+## Recall 3 Phases of Prediction Modelling studies
+
+::: {style="font-size: 0.5em"}
+**BMJ series 2009/Bouwmeester 2012/PROGRESS series 2013 (BMJ/Plos  Med)**
+:::
+
+::: {style="font-size: 0.8em"}
+1. Model development studies – to develop prediction model from data: identify important predictors; estimate predictor weights; construct model for individualised predictions; quantify predictive performance; internal validation
+
+2. Model validation studies –  test (validate) predictive performance of previously developed model in participant data other than development set 
+
+3. Model impact studies – quantify effect/impact actually using model on participant/physician management and health outcomes – relative to not using the model -> comparative studies.
+:::
+
+## Specific issue in Prediction Model studies
+
+- Bias in prognostic model development exhibited by:
+
+    - Overfitted models (too large ROC area, too optimistic calibration plot or outcome classification)
+    - Wrong estimated predictor weights
+    - Wrong estimated intercept
+
+- Unfortunately: often don’t know from development study -> only visible until model validation -> ideally external 
+
+## ...
+
+Slope plot < 1.0
+
+- Low prob too low
+- High prob too high
+
+![](Picture 14.png){width=70% height=400}
+
+
+## ...
+
+- Systematic overestimation predicted probabilities
+- Intercept (outcome incidence) development study too high!
+
+![](Picture 15.png){width=80% height=500}
+
+
+## PROBAST (Prediction model Risk Of Bias Assessment Tool)
+
+![](Picture 16.png){width=100% height=270}
+
+![](Picture 17.png){width=100% height=100}
+
+
+## Structure of PROBAST
+
+- Also domain-based: each with section risk of bias + applicability
+- Follows QUADAS-2, ROBINS-I, ROB 2.0 tool
+
+::: {style="font-size: 0.7em"}
+*Bias* occurs if systematic flaws or limitations in the design, conduct or analysis of a primary study distort the results. For the purpose of prediction modelling studies, we have defined *risk of bias* as the “likelihood that a prediction model leads to distorted predictive performance for its intended use in the targeted individuals”. The predictive performance is typically evaluated using calibration, discrimination, and (re)classification. 
+
+*Applicability* refers to the extent to which the prediction model from the primary study matches your systematic review question, for example in terms of the participants, predictors or outcomes of interest
+:::
+
+
+## PROBAST 4 phases
+
+![](Picture 18.png){width=50%}
+
+
+## Group Exercise{#color-slide}
+
+```{css, echo=FALSE}
+#color-slide h2 {
+ color: red;
+}
+```
+
+- Use PROBAST
+
+![](Picture 19.png){width=90% height=500}
+
+
+## Suggested answers PROBAST practical
+
+- Participant selection – LOW
+- Predictors – LOW
+- Outcome – LOW
+- Analysis – LOW
+
+
+# What to do with your risk of bias assessments…
+
+
+## Presentation of Risk of Bias
+
+
+- ‘Risk of Bias’ table (transparent reporting)
+
+Judge the specific domains for each study:
+
+    - Low risk of bias
+    - Moderate risk of bias
+    - High risk of bias
+
+- Provide complete descriptions from studies supporting judgments
+
+
+## Quality assessment/Risk of Bias Tool prognostic factor studies
+
+**Presentation across studies**
+
+![](Picture 20.png){width=100% height=500}
+
+
+## Quality assessment/Risk of Bias Tool prognostic factor studies
+
+**Presentation RoB summary**
+
+![](Picture 21.png){width=100% height=500}
+
+
+## Incorporating Assessments into Analyses
+
+- Not appropriate to ignore potential biases
+
+- Trade-off between bias and precision
+
+    - Including all eligible studies will produce a result with high precision
+    - But results may be biased due to flaws
+
+- Cautious analysis and interpretation
+
+## Approaches to Include RoB Results in Analysis
+
+- Restrict primary analysis to ONLY studies with low risk of bias (e.g. on all domains)
+
+    - Threshold-type of approach (arbitrary)
+    - Sensitivity analysis including higher risk studies
+
+- Explore the impact of individual bias domains
+
+    - Graphically according to risk of bias
+    - Comparison of subgroups
+
+## Take home messages
+
+![](Picture 22.png){width=100% height=500}
+
+
+## ...
+
+![](Picture 23.png){width=100% height=700}
+
+
+## Reporting guideline prediction modeling studies
+
+![](Picture 24.png){width=100% height=500}
+
+
+## Reporting guidelines
+
+![](Picture 25.png){width=100%}
+
+
+## ...
+
+![](Picture 26.png){width=100% height=700}
+
+
+## Cochrane PMG title registration form for SRs of prognostic studies
+
+![](Picture 27.png){width=100% height=600}
+
+
+## Cochrane PMG Protocol Template for SRs of prognostic studies
+
+![](Picture 28.png){width=100% height=600}
+
+
+## Examples SRs of prognostic factor studies
+
+::: {style="font-size: 0.7em"}
+- Is P53 a prognostic (molecular) marker for bladder cancer (Malats, Lancet Oncol, 2005)
+- SR on all molecular and biological prognostic markers of tumours in the Ewing’s Sarcoma Family (Riley Eur J Canc 2003)
+- Prognostic markers for death or tumour recurrence in patients with neuroblastoma (Riley, Br J Canc 2003)
+- Prognostic factors of sequelae and death after bacterial meninigitis in childhood (de Jonge, BMC Infectious Diseases 2010)
+Added value of carotid imaging markers in the prediction of fatal or non-fatal CVD events in general population (Peters, Heart 2011)
+:::
+
+
+## Examples SRs of prognostic modeling studies
+
+::: {style="font-size: 0.7em"}
+- Risk prediction models for the development of type 2 DM: SR (Collins 2011, Plos Med)
+- Prediction models for CVD in patients with type 2 DM (van Dieren, Heart 2011)
+- Risk prediction models for prolonged ICU stay after cardiac surgery (Ettema, Circulation 2010)
+- Risk prediction models for outcome after traumatic brain injury (Perel BMC Med Informatic and Decis Making 2006)
+- Prediction models for cardiovascular disease risk in the general population: systematic review (Damen, BMJ 2016)
+:::
+
