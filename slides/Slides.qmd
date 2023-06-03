@@ -1,0 +1,258 @@
+---
+title: "Comparative effectiveness research using real-world data"
+author: "Thomas Debray, Johanna Muñoz"
+format: revealjs
+engine: knitr
+---
+
+## About Us
+
+![](Picture 1.png){width=50%}
+
+
+## About Us
+
+![](Picture 2.png){width=50%}
+
+
+## Background
+
+- Healthcare innovation often involves the development of new drugs, therapies, and other medical interventions
+- Before these interventions can be applied in clinical practice, efforts are needed to evaluate their <span style="color:blue;">safety</span> and <span style="color:blue;">efficacy</span>.
+
+Common studies for comparative effectiveness research:
+
+- Randomized clinical trials (efficacy, safety)
+- Postmarketing surveillance studies (safety)
+
+## Background
+
+RCTs are widely recognized as the gold standard for estimating treatment efficacy 
+
+- <span style="color:blue;">Randomization</span> ensures that any differences in baseline characteristics between groups are due to chance
+- <span style="color:blue;">Blinding</span> ensures that knowledge of treatment allocation does not influence behaviours
+- <span style="color:blue;">Standardized protocols</span> ensure consistent data collection 
+
+## Background
+
+Clinical trials are not immune to bias
+
+![](Picture 3.png){width=50%}
+
+## Limitations of randomized trials
+
+::: {style="font-size: 0.7em"}
+- Experimentation may be unnecessary
+  
+  (e.g., treatment effects are much stronger than possible confounders)
+- Experimentation may be inappropriate
+  
+  (e.g. evaluation of rare or long-term outcomes)
+- Experimentation may be impossible
+  
+  (e.g. due to ethical concerns)
+- Experimentation may be inadequate
+  
+  (e.g. lack of external validity)
+- Experimentation may be unfeasible
+  
+  (e.g. evaluation of rare diseases, early evaluation of COVID interventions)
+:::
+
+::: {style="font-size: 0.5em"}
+**Ref**: Black N. BMJ 312, 1215–18.
+:::
+
+## Efficacy-effectiveness gap
+
+![](Picture 4.png){width=100% height=500}
+
+::: {style="font-size: 0.5em"}
+**Ref**: Eichler HC, et al. Nature Reviews. Drug Discovery 2011.
+:::
+
+
+## Efficacy-effectiveness gap
+
+::: {style="font-size: 0.8em"}
+Real-world effectiveness of medical interventions may be affected by
+
+- Biology
+
+    - Patient characteristics 
+
+- Behaviour 
+
+    - Off-label prescribing
+    - Use of concomitant medications
+    - Handling & storage of drugs
+    - Patient adherence
+:::
+
+
+::: {style="font-size: 0.5em"}
+**Ref**: Eichler HC, et al. Nature Reviews. Drug Discovery 2011.
+:::
+
+## The need for real-world data
+
+- Evaluate treatment effects in the real-world setting 
+
+    - Identification of efficacy-effectiveness gap
+    - Estimation of individualized treatment effects
+
+- Provide new information on
+
+    - Rare adverse events
+    - Long-term & patient-reported outcomes
+    - Adherence to treatment
+    - Resource use in clinical settings 
+    
+::: {style="font-size: 0.5em"}
+**Ref**: Makady A, et al. J. Comp. Eff. Res. 2017.
+:::
+
+## The validity of real-world evidence
+
+Well conducted observational studies can provide reliable estimates of treatment effect
+
+![](Picture 5.png){width=200%, height=400}
+
+## Real-world evidence; old wine in a new bottle?
+
+![](Picture 6.png){width=50%}
+
+## Study designs for generating real-world data
+
+![](Picture 7.png){width=50%}
+
+## Sources of real-world data
+
+![](Picture 8.png){width=50%}
+
+
+## Quality of real-world data
+
+Key concerns
+
+- Missing values
+- Lack of standardizing clinical endpoints
+  
+  (e.g., out-of-hospital data may require linkage and be less reliable)
+- Lack of harmonizing data collection
+  
+  (e.g. measurement methods may vary across hospitals)
+  
+## Quality of real-world data
+
+![](Picture 9.png){width=50%}
+
+Presence of missing values in MIMIC-III, a database with EHR data from patients admitted to critical care at a large tertiary care hospital
+
+
+## Generating real-world evidence
+
+![](Picture 10.png){width=50%}
+
+
+## Generating real-world evidence
+
+Risk of bias
+
+- Confounding
+- Information bias
+  
+  (e.g., interviewer bias, recall bias, detection bias)
+- Selection bias
+  
+  (e.g., sampling bias, loss to follow-up)
+- Time-related bias
+  
+  (e.g., immortal time bias, time-window bias) 
+
+## Generating real-world evidence
+
+![](Picture 11.png){width=100%}
+
+## Adjusting for potential sources of bias
+
+::: {style="font-size: 0.8em"}
+- **Confounders**
+  
+  e.g., covariate adjustment, propensity score analysis
+- **Missing data**
+  
+  e.g., covariate adjustment, multiple imputation
+- **Measurement error**
+  
+  e.g., measurement error correction models
+- **Informative visit processes**
+  
+  e.g., weighted estimators, multiple imputation
+- **Lack of generalizability**
+  
+  e.g., evidence synthesis
+:::
+
+
+## Recent developments in evidence synthesis
+
+![](Picture 12.png){width=50%}
+
+## Meta-analysis Individual Participant Data
+
+![](Picture 13.png){width=50%}
+
+
+## Meta-analysis Individual Participant Data
+
+![](Picture 14.png){width=50%}
+
+
+## Meta-analysis Individual Participant Data
+
+![](Picture 15.png){width=50%}
+
+
+## Imputation of missing data in IPD meta-analysis
+
+::: {style="font-size: 0.9em"}
+Imputation of MNAR
+
+Exploit the availability of <span style="color:blue;">exclusion restriction variables</span>
+
+- Variables that are not related to the unobserved value, but only to their availability)
+- Exclusion restriction variables are not informative in traditional (MAR-based) imputation methods
+- Adoption of the Heckman selection model, which will collapse to "traditional” imputation methods if MNAR assumption is not compatible with the observed data and modelling assumptions
+:::
+
+## Imputation of missing data in IPD meta-analysis
+
+**Example**: imputation in a HIV survey where CD4 counts are selectively missing
+
+![](Picture 16.png){width=100% height=250}
+
+
+## Imputation of missing data in IPD meta-analysis
+
+![](Picture 17.png){width=50%}
+
+
+## Imputation of missing data in IPD meta-analysis
+
+- Heckman model offers reliable imputations when data are M(N)AR.
+- Implementation requires access to one or more exclusion restriction variables, which may be difficult to identify
+- Estimation of the Heckman model depends on the cluster sample size.
+- Deviations from normality distribution could affect convergence and processing time. 
+
+## Handbook development
+
+![](Picture 18.png){width=50%}
+
+## Handbook development
+
+![](Picture 19.png){width=50%}
+
+## .
+
+![](Picture 20.png){width=50%}
