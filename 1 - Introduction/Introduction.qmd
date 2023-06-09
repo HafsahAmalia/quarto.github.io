@@ -1,0 +1,39 @@
+---
+title: "The theory of multiple imputation"
+author: "Thomas Debray, PhD"
+format: revealjs
+engine: knitr
+---
+
+## Introduction
+
+**Main characteristics of multiple imputation (MI)**
+
+Replace each missing value $𝑦^{mis}$ with M plausible values
+
+![](Picture 1.png){width=100% height=400}
+
+## Introduction
+
+**Main characteristics of multiple imputation (MI)**
+
+Each imputed value is generated <span style="color:blue;">conditionally from the observed data</span>
+
+![](Picture 2.png){width=50% height=400}
+
+## Introduction
+
+**Main characteristics of multiple imputation (MI)**
+
+Borrowing of information across variables requires to define a multivariate distribution
+
+![](Picture 2.png){width=50% height=400}
+
+
+## Introduction
+
+Strategies to allow borrowing of information
+
+- Simultaneous approaches that define a multivariate distribution f(Y ) directly (“**joint modelling**”)
+
+- Sequential approaches that build up a multivariate distribution using a ladder of conditional distributions, where the model for each variable conditions only on those earlier in the sequence (“**fully conditional specification**”)
