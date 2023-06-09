@@ -1,0 +1,842 @@
+---
+title: "Statistical methods for IPD-MA of prognosis studies"
+author: "Thomas Debray, PhD"
+format: revealjs
+engine: knitr
+---
+
+## What is a good prediction model?
+
+![](Picture 1.png){width=50%}
+
+
+## What is a good prediction model?
+
+**General requirements**
+
+- Generates accurate predictions in individuals from potential population(s) for clinical use
+- Ability to discriminate between different risk groups
+- Improves patient outcomes by informing treatment decisions
+
+## The reality
+
+![](Picture 2.png){width=100%}
+
+## The reality
+
+**Most prediction models are not as good as we think**
+
+- Quality of many prognostic model studies is poor
+
+    - Limited sample size
+    - Incomplete registrations & reporting
+    - No study protocols
+    - Overfitting
+
+- Most prediction models perform more poorly than anticipated
+- Lack of external validation
+
+## Lack of internal validity
+
+![](Picture 3.png){width=50%}
+
+
+## Lack of external validity
+
+Poor performance in new patients from different (but related) populations
+
+![](Picture 4.png){width=50%}
+
+## But wait… this is not the end
+
+![](Picture 5.png){width=50%}
+
+## Numerous models for same target population + outcomes
+
+![](Picture 6.png){width=50%}
+
+
+## Numerous models for same target population + outcomes
+
+![](Picture 7.png){width=100% height=700}
+
+
+# Opportunities
+
+
+## The rise of big datasets
+
+![](Picture 8.png){width=100% height=700}
+
+## The rise of big datasets
+
+Data increasingly available for thousands or even millions of patients from multiple practices, hospitals, or countries.
+
+- Meta-analysis of individual participant data (IPD) from multiple studies
+
+    - Observational studies
+    - Randomized controlled trials
+
+- Analyses of databases and registry data containing e-health records
+
+
+## The rise of big datasets
+
+The **QRESEARCH** database
+
+- Anonymised health records of over 25 million people from 1500 general practices spread throughout the UK
+- Linkage to Hospital Episode Statistics, Mortality and Cancer Registration data
+
+## The rise of big datasets
+
+![](Picture 9.png){width=100% height=700}
+
+
+## The rise of big datasets
+
+![](Picture 10.png){width=100% height=700}
+
+
+## The rise of big datasets
+
+![](Picture 11.png){width=50%}
+
+
+## External validation of prediction models
+
+The merits of IPD-MA upon external validation of clinical prediction models
+
+
+## Background
+
+**Key references**
+
+- Riley et al. External validation of clinical prediction models using big datasets from e-health records or IPD meta-analysis: opportunities and challenges. BMJ 2016.
+
+- Debray et al. Individual Participant Data (IPD) meta-analyses of diagnostic and prognostic modeling studies: guidance on their use. PLOS MED 2015.
+
+
+## Why do we need external validation?
+
+- The predictive performance of a model estimated on the development data is often too optimistic
+
+- A prognostic model should provide predictions that are valid outside the specific context of the sample that was used for model development
+
+- How a model was derived is of little importance if it performs well.
+
+
+## What do we mean by external validation?
+
+- Apply the clinical prediction model (CPM) to new individuals
+
+    - Temporal validation 
+    - Geographical validation
+    - Domain validation
+
+- Evaluate the predictive accuracy
+
+    - Overall performance
+    - Calibration
+    - Discrimination
+    
+## Measures of prediction model performance
+
+![](Picture 12.png){width=100% height=700}
+
+## Measures of prediction model performance
+
+**Discrimination**
+
+Quantifies the model’s extent to distinguish between events and non-events
+
+- Summary statistics
+
+    - Concordance  (c) index
+    - Area under the ROC curve (AUC)
+    - Discrimination slope
+
+- Visual inspection
+
+    - Receiving Operating Characteristics (ROC) curve
+    
+## Measures of prediction model performance
+
+**Discrimination**
+
+AUC = 0.77
+
+![](Picture 13.png){width=80% height=500}
+
+## Measures of prediction model performance
+
+**Calibration**
+
+Agreement between observed outcomes and predictions
+
+- Visual inspection
+
+    - Calibration plot
+
+- Summary statistics
+
+    - O:E statistic (#observed events / #predicted events)
+    - Calibration-in-the-large
+    - Calibration slope
+    - Hosmer-Lemeshow goodness-of-fit test
+    
+## Measures of prediction model performance
+
+![](Picture 14.png){width=80% height=600}
+
+## Measures of prediction model performance
+
+![](Picture 15.png){width=80% height=600}
+
+## Measures of prediction model performance
+
+![](Picture 16.png){width=80% height=600}
+
+
+## Example study
+
+Development and validation of a prediction model for the presence of serious bacterial infections in children with fever.
+
+**Development of the model**
+
+- Population: 379 children between 1 month and 36 months of age referred to the Emergency Department from a hospital in NL (75 events)
+- Analysis: logistic regression with forward stepwise variable selection (57 variables -> 9 predictors)
+- Internal validation:
+
+    - AUC = 0.825 (95% CI: 0.78 – 0.87)
+    - Bootstrap-corrected AUC = 0.756
+
+
+## Example study
+
+![](Picture 17.png){width=100% height=700}
+
+
+## Current shortcomings of validation studies
+
+- External validation requires sufficient data 
+
+    - Recommendations: >100 events and >100 non-events
+    - Less data available for model development
+
+- Not all validation studies are equally informative. 
+
+    - To what extent do individuals from the validation sample represent the target population?
+    - To what extent are estimates of model performance affected by flaws in the design and analysis of the validation study?
+    - To what extent can the CPM be implemented across different populations and settings?
+    
+    
+## Current shortcomings of validation studies
+
+**Why do we need big datasets for external validation?**
+
+- The predictive performance of a model tends to vary across settings, populations and periods
+
+- Multiple external validation studies are needed to fully appreciate the generalizability of a prediction model
+
+- Heterogeneity in model performance is rarely assessed, but investigating its extent is crucial to evaluate the model’s potential generalizability and clinical usefulness.
+
+
+## Causes of heterogeneity in model performance
+
+**Invalid predictor effects**
+
+- Over-fitting of the prediction model to the development study (sometimes avoided using penalization)
+
+- Biased estimates of predictor effects (e.g. due to flaws in the development study)
+
+- Missed interactions or non-linear associations
+
+
+## Causes of heterogeneity in model performance
+
+**Discrepancies in outcome and predictor assessement**
+
+- Different measurement method for predictors
+
+  (e.g. using equipment from different manufacturers)
+- Different recording time of predictors
+
+  (e.g. before or after surgery)
+- Different quantification of predictors
+
+  (e.g. use of cut-points may vary)
+- Different disease and outcome definitions
+- Different follow-up lengths
+
+
+## Causes of heterogeneity in model performance
+
+**Differences between study characteristics**
+
+![](Picture 18.png){width=50%}
+
+
+## Causes of heterogeneity in model performance
+
+::: {style="font-size: 0.8em"}
+**Case-mix variation (spectrum effect)**
+
+- Different distribution of predictor values
+- Different standards of care and treatment strategies
+- Different starting points
+
+  (e.g. earlier diagnosis due to screening program)
+- Different outcome prevalence or incidence
+- Different participant or setting characteristics
+
+Case-mix variation can lead to genuine differences in the performance of a prediction model, even when the predictor effects remain ‘’correct” in the validation study
+:::
+
+
+## Interpretation of model performance
+
+Need to disentangle case-mix differences from differences in predictor effects!
+
+![](Picture 19.png){width=50%}
+
+## Interpretation of model performance
+
+Need to adjust for clustering!
+
+![](Picture 20.png){width=80% height=600}
+
+
+## Examining heterogeneity and improving model performance
+
+**Recommendations**
+
+- Calculate key performance statistics in each validation study
+- Summarize the performance measures by applying (multivariate) random effects meta-analysis 
+- Quantify between-study heterogeneity in model performance using 95% prediction intervals
+
+## Examining heterogeneity and improving model performance
+
+**Guidance paper**
+
+![](Picture 21.png){width=50%}
+
+## Examining heterogeneity and improving model performance
+
+![](Picture 22.png){width=100% height=600}
+
+## Example 1
+
+![](Picture 23.png){width=100% height=600}
+
+## Example 1
+
+![](Picture 24.png){width=100% height=600}
+
+
+## Example 1
+
+**External validation in 12 studies**
+
+![](Picture 25.png){width=100% height=600}
+
+## Example 1
+
+**External validation in 12 studies**
+
+- Substantial between-study heterogeneity!
+- Approximate 95% prediction intervals:
+
+    - Calibration slope = 0.59 to1.38
+    - E:O ratio= 0.38 to 2.72 
+    - c-statistic = 0.64 to 0.73
+
+The model requires improvements to improve discrimination and to be clinically useful!
+
+## Example 2
+
+**Prognosis of cardiovascular disease** in patients from general practice using QRISK2
+
+- 364 practices from the UK
+- Sample size (total N=2,084,445)
+- Event occurrence (total E=93,564) 
+
+Again, each cluster might be viewed as a different external validation study!
+
+## Example 2
+
+**External validation in 364 practices**
+
+![](Picture 26.png){width=100% height=600}
+
+
+## Example 2
+
+**External validation in 364 practices**
+
+![](Picture 27.png){width=100% height=600}
+
+
+## Example 2
+
+**External validation in 364 practices**
+
+- Discrimination
+
+    - Summary c-statistic: 0.83
+    - 95% confidence interval: 0.825 to 0.834
+    - 95% prediction interval: 0.76 to 0.90
+
+- Calibration
+
+    - E:O summary estimate: 1.01
+    - Slight over-prediction in women at higher CVD risk
+    - QRISK2 appears to accurately predict 10-year CVD risk across all age groups.
+
+
+## Example 2
+
+**Investigating between-study heterogeneity**
+
+- Recall that variation in case-mix severity and case-mix heterogeneity may affect model performance.
+
+    - Larger case-mix variation is related to larger discrimination performance
+    - Populations with a narrower case-mix tend to have worse discrimination performance
+
+- Recall that discrimination of QRISK2 heterogeneous
+
+    - Population mean age
+    - Percentage smokers
+
+## Example 2
+
+![](Picture 28.png){width=100% height=600}
+
+## Example 3
+
+**Prognosis of coronary heart disease**
+
+- 37 prospective studies
+- Sample size (total N=165,856)
+- Event occurrence (total E=8,806) 
+- Average follow-up of 9.8 years
+
+::: {style="font-size: 0.7em"}
+**Ref**: Pennells LS et al. Assessing Risk Prediction Models Using Individual Participant Data From Multiple Studies. AJE 2013.
+:::
+
+## Example 3
+
+**External validation in 37 studies**
+
+- Discrimination
+
+    - Summary c-statistic: 0.715
+    - 95% confidence interval: 0.694 to 0.736
+    - 95% prediction interval: 0.59 to 0.84
+
+Again, there is substantial heterogeneity in model performance!
+
+
+## Example 3
+
+**Investigating between-study heterogeneity**
+
+![](Picture 29.png){width=50%}
+
+
+## Practical and methodological challenges
+
+Caution is warranted when interpreting summary estimates of model performance and between-study heterogeneity.
+
+- **Data quality**
+
+    - Missing predictor values
+    - Non-standardised definitions of diagnoses and outcomes
+    - Incomplete follow-up times and event dates
+    - Lack of recording of novel/costly predictors
+    - Risk of double entries
+
+- **Data dredging**
+
+**Need for study protocols and quality appraisal tools!**
+
+
+# Development of prediction models
+
+## Model development using big datasets
+
+![](Picture 30.png){width=100% height=600}
+
+
+## Model development using big datasets
+
+**Main opportunities**
+
+- Increase total sample size
+- Increase available case-mix variability
+- Ability to standardize analysis methods across IPD sets
+- Ability to investigate more complex associations
+- Ability to directly validate developed prediction models across a wide range of populations and settings
+- Ability to evaluate generalizability of the model
+
+
+## Model development using big datasets
+
+**So, let’s pool our IPD and ‘launch’ the analysis?**
+
+![](Picture 31.png){width=100%}
+
+
+## Model development using big datasets
+
+**Wait... which analysis?**
+
+![](Picture 32.png){width=50%}
+
+## Current practice
+
+![](Picture 33.png){width=100% height=600}
+
+## Current practice
+
+**Analysis methods** (review of 15 IPD-MA)
+
+- 10 articles pooled all the IPD into one big dataset and analysed it ignoring clustering of patients
+- 4 articles used a one-stage approach accounting for clustering (e.g. Stratification of intercept term)
+- 1 article used a two-stage approach accounting for clustering
+
+::: {style="font-size: 0.5em"}
+**Ref**: Ahmed I, et al. Developing and Validating Risk Prediction Models in an Individual Participant Data Meta-Analysis. BMC Medical Research Methodology 2014.
+:::
+
+## Current practice
+
+**Investigation of heterogeneity**
+ 
+- 12 articles did not consider heterogeneity in predictor effects
+- 1 article investigated interaction terms between study and each predictor
+- 1 article investigated heterogeneity using the I2 statistic
+- 1 article investigated heterogeneity using Chi-square test
+
+
+## Current practice
+
+Out of 15 IPD-MA
+
+- 10 studies completely ignore potential of heterogeneity
+- 4 studies allow for heterogeneity in baseline risk
+- 1 study allows for heterogeneity in predictor effects
+
+However, using random effects methods may not even be appropriate to deal with heterogeneity!
+
+
+## Problems with meta-analysis methods
+
+**Random effects summaries are of limited value**
+
+- Predictor effects and/or baseline risk may take different values for each included study
+- Which  parameters to use when validating/implementing the model in new individuals or study populations?
+- When do study populations differ too much to combine? 
+
+Need for a framework that can identify the extent to which aggregation of IPD is justifiable, and provide the optimal approach to achieve this.
+
+
+## Problems with meta-analysis methods
+
+![](Picture 34.png){width=100% height=600}
+
+## Recommendations
+
+- **Allow for different baseline risks in each of the IPD studies**
+
+    - Account for differences in outcome prevalence (or incidence) across studies
+    - Examine between-study heterogeneity in predictor effects and prioritize inclusion of (weakly) homogeneous predictors
+    - Appropriate intercept for a new study can be selected using information on outcome prevalence (or incidence)
+
+- **Implement a framework that uses internal-external cross-validation**
+
+
+## The framework
+
+**Step 1**: Different choices for combining IPD
+
+- Merge all data into one big dataset and ignore heterogeneity
+- Allow heterogeneous baseline risk across studies
+
+    - assume random effects distribution for the intercept terms
+    - estimate study-specific intercept terms
+
+- Advanced modeling of predictor effects is also possible
+
+    - Nonlinear effects
+    - Interaction terms
+
+## The framework
+
+::: {style="font-size: 0.9em"}
+**Step 2**: Choosing an appropriate model intercept when implementing the model to new individuals
+
+- verage intercept term
+  
+  (e.g. pooled estimate) 
+- Updating of intercept term
+
+  (requires patient-level data)
+- Use intercept of included study
+  
+  (e.g. based on outcome occurrence)
+
+Propose which intercept term to use in new populations
+!! More difficult in case of heterogeneous predictor effects
+:::
+
+## The framework
+
+**Step 3**: Model evaluation to check whether…
+
+- Strategy for estimating predictors and intercept is adequate
+- Strategy for choosing intercept term (and predictor effects) in new study population is adequate 
+- Model performance is consistently well across studies
+
+    - Discrimination
+    - Calibration 
+
+=> Use of internal-external cross-validation
+
+## Internal-external cross-validation
+
+![](Picture 35.png){width=100% height=600}
+
+
+## Internal-external cross-validation
+
+![](Picture 36.png){width=100% height=600}
+
+## Formally comparing different strategies
+
+::: {style="font-size: 0.85em"}
+- Meta-analyze estimtes of model performance(See also MSc course SR&MA of prognostic studies)
+
+    - Compare summary estimates 
+    - Compare prediction intervals
+
+- Rank different strategies by their overall performance
+
+    - Calculate the joint probability that, in a new population, model performance will meet certain criteria 
+    
+      (e.g. C-statistic > 0.7 and cal. slope between 0.9 and 1.1)
+    - The strategy with the largest probability will be ranked first
+    - This requires reliable prediction intervals!!
+
+::: {style="font-size: 0.5em"}
+**Ref**: 10.1016/j.jclinepi.2015.05.009
+:::
+
+:::
+
+## Example 1
+
+**Diagnosis of deep vein thrombosis** (N=12)
+
+::: {style="font-size: 0.85em"}
+Strategies evaluated:
+
+- Inclusion of 2 predictors (gender & recent surgery)
+- Modelling of intercept term
+
+    - Re-estimate in each validation study
+    - Random effects modeling
+    - Stratified intercept term
+
+- Model implementation
+
+    - Average intercept
+    - Select estimated intercept term based on prevalence
+
+
+Assessment of AUC and calibration-in-the-large (CITL)
+:::
+
+## Example 1
+
+**Diagnosis of deep vein thrombosis** (N=12)
+
+![](Picture 37.png){width=100% height=600}
+
+
+## Example 1
+
+**Diagnosis of deep vein thrombosis** (N=12)
+
+![](Picture 38.png){width=50%}
+
+
+
+## Example 1
+
+**Diagnosis of deep vein thrombosis** (N=12)
+
+![](Picture 39.png){width=50%}
+
+
+## Example 2
+
+**Prognosis of breast cancer**
+
+- IPD from 8 cohort studies
+- Sample size: 69 to 3,242 per study (total N=7,435)
+- Event occurrence (total E=2,043)
+- Median follow-up: 86.3 months
+
+## Example 2
+
+**Model development strategy**
+
+- Common predictor effects with proportional hazards
+- Backwards variable selection from 8 candidate predictors (using P>0.05 for exclusion)
+- Royston-Parmar survival model with country-specific (but proportional) baseline hazard
+
+## Example 2
+
+**Strategies for model implementation**
+
+1. Re-estimate adjustment factor for the baseline hazard in the validation sample
+2. Use weighted average of estimated country-specific adjustment factors
+3. Select an estimated adjustment factor from a country that is geographically the closest.
+
+## Example 2
+
+![](Picture 40.png){width=50%}
+
+
+## Example 2
+
+![](Picture 41.png){width=50%}
+
+
+## Example 3
+
+**Prognosis of amyotrophic  lateral disease**
+
+- IPD-MA
+
+    - 14 cohort studies (specialized ALS centres)
+
+- Sample size
+
+    - 190 to 1,936 per study (total N = 11,475)
+
+- Composite endpoint
+
+    - Non-invasive ventilation for more than 23h/day, or death
+    - Total number of events E = 8,819
+
+- Median follow-up: 97.5 months
+
+Development of the NCALS model
+
+## Example 3
+
+![](Picture 42.png){width=100% height=700}
+
+
+## Example 3
+
+![](Picture 43.png){width=50%}
+
+
+## Example 3
+
+**Internal-external cross-validation**
+
+- c-statistic
+
+    - Summary estimate: 0.78 (0.77 to 0.80)
+    - 95% PI: 0.74 to 0.82
+
+- Calibration slope
+
+    - Summary: 1.01 (0.95 to 1.07)
+    - 95% PI: 0.83 to 1.18
+
+- Calibration-in-the-large
+
+    - Summary: -0.12 (-0.33 to 0.08)
+    - 95% PI: -0.88 to 0.63
+
+## Example 3
+
+![](Picture 44.png){width=100% height=600}
+
+## Example 3
+
+![](Picture 45.png){width=100% height=600}
+
+## Example 3
+
+![](Picture 46.png){width=100% height=600}
+
+
+## R software
+
+![](Picture 47.png){width=100% height=600}
+
+
+# Assignment
+
+## Reading material
+
+![](Picture 48.png){width=50%}
+
+## Questions
+
+::: {style="font-size: 0.85em"}
+- Did the authors explore potential for heterogeneity?
+
+    - Baseline risk
+    - Predictor effects
+
+- Did the authors account for heterogeneity?
+
+    - Baseline risk
+    - Predictor effects
+
+- How should we implement the model in new patients?
+
+    - The Netherlands
+    - Sweden
+    - China
+
+- Did the authors evaluate model generalizability?
+- How could the model be improved?
+:::
+
+# Take home messages
+
+
+## Major advantages of IPD-MA
+
+- Improving the performance of novel prediction models across different study populations
+- Attain a better understanding of the generalizability of a prediction model
+- Exploring heterogeneity in model performance and the added value of a novel (bio)marker
+
+Unfortunately, most researchers analyze their IPD as if representing **a single dataset**!
+
+
+## Remaining challenges in IPD-MA
+
+- IPD-MA no panacea against poorly designed primary studies
+
+    - Prospective multi-center studies remain important
+
+- Synthesis strategies from intervention research cannot directly be applied in prediction research  (due to focus on absolute risks)
+
+- Adjustment to local circumstances often needed
+
+    - One model fits all?
+    - Methods for tailoring still underdeveloped
+
+**New methods are on their way!**
+
+
+
