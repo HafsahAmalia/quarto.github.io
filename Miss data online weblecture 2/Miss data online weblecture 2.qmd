@@ -1,0 +1,317 @@
+---
+title: "Methods to deal with missing data"
+author: "K.G.M. Moons, PhD"
+format: revealjs
+engine: knitr
+---
+
+## Methods to handle missing data
+
+**Complete case analysis (CC)**
+
+**Available case analysis (AC)**
+
+**Missing indicator method**
+
+**Overall mean/median imputation**
+
+**Subgroup mean/median imputation**
+
+**Single (multivariable) regression based imputation**
+
+**Multiple regression based imputation**
+
+
+## Methods to handle missing data
+
+**Complete case analysis (CC)**
+
+::: {style="font-size: 0.7em"}
+- Base analyses on the subset of completely observed subjects 
+
+- If MCAR (though seldom): 
+
+    - less precision
+    - valid results 
+
+- If MAR (as usual in medicine):
+
+    - Efficiency loss
+    - (Very) biased (see papers on black board/ references at end)
+:::
+
+## Complete case
+
+- Example 1 (above): 
+- Missing PH+PE in sicker subjects -> biased predictive value of PE+PH predictors (over- or underestimated)
+- Missing lab tests in healthy subjects -> biased predictive value of lab predictors
+
+## Complete case
+
+- Example 2 (above):
+- Mean outcome (or % events) in placebo group selectively (!) lower -> RR too close to 1 (if Ry effective)
+
+## Complete case
+
+- How about correlation and regression? 
+
+- Since, in theory, with good correlation (r=1) r indeed same even if (e.g.) all higher values not available -> same regression line
+
+- Correlation coefficients indeed more robust when MAR, but not immune (‘due to restriction of range’):
+
+
+## Answer
+
+![](Picture 1.png){width=100%}
+
+## Complete case
+
+::: {style="font-size: 0.7em"}
+- Sometimes possible to redefine study population to get complete cases:
+
+    - E.g. missings mainly before 1980; study population becomes ‘all subjects after 1980’
+
+- CC = in fact redefinition of study and thus source population (domain)
+
+    - E.g. missings in specific hospital/country -> study population becomes ‘all subjects in completely observed hospitals/countries’
+    - E.g. missing outcomes in RCTs -> ‘Results apply to patients who with complete f-up’ -> is this a solution?
+:::
+
+## Answer
+
+::: {style="font-size: 0.7em"}
+- Sometimes possible to redefine study population to get complete cases:
+
+    - E.g. missings mainly before 1980; study population becomes ‘all subjects after 1980’
+
+- CC = in fact redefinition of study and thus source population (domain)
+
+    - E.g. missings in specific hospital/country -> study population becomes ‘all subjects in completely observed hospitals/countries’
+    - E.g. missing outcomes in RCTs -> ‘Results apply to patients who with complete f-up’ -> is this a solution?
+    
+Always unknown beforehand in practice
+:::
+
+## Methods to handle missing data
+Simple methods (ad hoc)
+
+**Complete case analysis (CC)**
+
+**Available case analysis (AC)**
+
+**Missing indicator method**
+
+**Overall mean/median imputation**
+
+**Subgroup mean/median imputation**
+
+**Single (multivariable) regression based imputation**
+
+**Multiple regression based imputation**
+
+## ...
+
+**Available case analysis (AC)**
+
+- Use in each (sub-)analysis all cases with complete data on the variables involved (in the model).
+- Most used method in practice
+- In general AC more efficient than CC since most of the time more data will be used!
+- Is this a problem?
+
+## Answer
+
+- Number of subjects is different for each sub-analysis; this may cause interpretation problems or even estimation problems
+
+    - prediction model comparisons on different subjects
+      
+        - Added value estimates wrong
+
+## Available case
+
+- Problems with MCAR + MAR similar as CC
+
+    - Unbiased if MCAR ; biased if MAR
+    - Bias sometimes smaller than CC; sometimes larger
+
+## Methods to handle missing data
+Simple methods (ad hoc)
+
+**Complete case analysis (CC)**
+
+**Available case analysis (AC)**
+
+**Missing indicator method**
+
+**Overall mean/median imputation**
+
+**Subgroup mean/median imputation**
+
+**Single (multivariable) regression based imputation**
+
+**Multiple regression based imputation**
+
+## Indicator method
+
+- originally developed for etiologic analysis with missing confounder information ->
+- to allow for analysis of all subjects on the determinant at interest
+
+## Indicator method
+
+![](Picture 2.png){width=100%}
+
+## ...
+
+![](Picture 3.png){width=100%}
+
+
+## Indicator method
+
+![](Picture 4.png){width=100%}
+
+
+## Indicator method
+
+![](Picture 5.png){width=100%}
+
+
+## Indicator method
+
+![](Picture 6.png){width=100%}
+
+
+## Indicator method
+
+![](Picture 7.png){width=100%}
+
+
+## Indicator method
+
+::: {style="font-size: 0.7em"}
+- Method developed for etiologic research for (partially) missing confounder data
+- To allow for using all data on the determinant of interest in the analysis (not loosing power)
+- But: 
+
+    - $b_{10}$ is not adjusted for gender, so potentially biased
+    - Consequently, b1 potentially biased…
+    - Due to mutually adjustment b2 also biased
+    - and $b_0$ is biased --> very important in prediction research (intercept)
+    - Everything is biased
+:::
+
+## Indicator method
+
+- Indicator method smaller SE’s than  CC or AC
+- Many consider indicator method valid but gives biased results;
+
+    - even when MCAR holds!!!!!
+    - limited relevance to practice – indicator often significantly related to outcome – unhandy message for prediction research (‘do not measure this variable’)
+
+- Refs. Donders JCE 2006; Knol MJ et al 2010
+
+## Methods to handle missing data
+Simple methods (ad hoc)
+
+**Complete case analysis (CC)**
+
+**Available case analysis (AC)**
+
+**Missing indicator method**
+
+**Overall mean/median imputation**
+
+**Subgroup mean/median imputation**
+
+**Single (multivariable) regression based imputation**
+
+**Multiple regression based imputation**
+
+## Imputation
+
+- Imputation is replacement – best method!!
+
+- Missing observations are replaced by ‘predicted’ values (‘best guesses’), based on observed data 
+
+    - can be done if MAR!!!!
+
+## Overall mean/median imputation
+
+- What is it?
+
+- What are the consequences and disadvantages?
+
+## Answer
+
+- For each missing on variable Z overall mean from observed subject-values imputed
+
+    - Diseased + non-diseased together
+
+- All imputations have same value for Z
+
+    - Distributions of Z for D+ and D- will merge/less overlap
+    - Association of Z on outcome dilutes = bias
+    - Also: distribution of Z becomes too narrow (SD too low)
+
+        - SE’s of Z underestimated -> too often significant
+
+ALWAYS: ALSO IF MCAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+## Subgroup mean/median imputation
+
+- What is it?
+- Why better than overall mean/median imputation?
+- What are the consequences/disadvantages?
+
+## Subgroup mean imputation
+
+::: {style="font-size: 0.7em"}
+- A priori relevant subgroups are defined  based on associations with variable (Z) with missings
+
+    - E.g. per outcome category, sex, age groups, etc.
+
+- Estimate mean/median for subgroup
+
+    - For each missing on Z  subgroup mean is imputed 
+
+- More variations in imputed values than overall mean/median
+
+    - Less bias though SE’s still underestimated
+    - Limited number of co-variates can a-priori be defined
+    - Requires categorisation for continuous variables (loss of information)
+:::
+
+## Methods to handle missing data
+Simple methods (ad hoc)
+
+**Complete case analysis (CC)**
+
+**Available case analysis (AC)**
+
+**Missing indicator method**
+
+**Overall mean/median imputation**
+
+**Subgroup mean/median imputation**
+
+**Single (multivariable) regression based imputation**
+
+**Multiple regression based imputation**
+
+
+# Tomorrow – Thomas Debray
+
+## References
+
+::: {style="font-size: 0.7em"}
+- A gentle introduction to imputation of missing values (Donders JCE 2006)
+- Handling missing data in multivariable diagnostic research: a clinical example (van der Heijden JCE 2006). 
+- Using the outcome variable to impute missing values of predictor variables: a self fulfilling prophecy? (Moons JCE 2006)
+- To Impute is better than to ignore (Janssen JCE 2010)
+- Dealing with missing values when validating a prediction model (Janssen Clin Chem 2009)
+- Imputation of missing outcomes in observational and randomised studies (Groenwold AJE 2012)
+- Little et al; New Engl J Med 2012
+- Groenwold RH, Moons KG, Vandenbroucke JP. Randomized trials with missing outcomes: what to report and how to analyze. CMAJ 2014 
+:::
+
+
+
+
