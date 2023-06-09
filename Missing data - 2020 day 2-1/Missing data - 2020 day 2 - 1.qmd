@@ -1,0 +1,95 @@
+---
+title: "Imputation of Missing Data"
+author: "Thomas Debray, PhD; Jeroen Hoogland, GradStat"
+format: revealjs
+engine: knitr
+---
+
+## Recap
+
+What are the main types of missing data?
+
+![](Picture 1.png){width=100%}
+
+::: {style="font-size: 0.5em"}
+BMJ 2009; 338 doi: https://doi.org/10.1136/bmj.b2393
+:::
+
+## Recap
+
+- Why should we worry about missing data?
+
+    - Ignoring missing data (complete/available case analysis) looses power (always) and introduces bias (in non-MCAR situations)
+    - Ad hoc methods such as (subgroup)mean cause bias and may affect both power and type I error
+    - The missing indicator method gives biased estimates
+
+More advanced methods are needed!
+
+## Methods to handle missing data	
+
+Complete case analysis (CC)
+
+Available case analysis (AC)
+
+Missing indicator method
+
+Overall mean/median imputation
+
+Subgroup mean/median imputation
+
+**Single (multivariable) regression based imputation**
+
+**Multiple regression based imputation**
+
+## Univariate missing data
+
+Consider we have one variable with missing observations for some participants. 
+
+![](Picture 2.png){width=100%}
+
+## Single imputation by regression
+
+::: {style="font-size: 0.7em"}
+- Develop a prediction model to predict the missing values based on the observed data
+
+    - Include the outcome (!) of the analysis model
+    - Include all variables of the analysis model
+    - Include yet (!) unknown predictors of the missing value
+
+- Imputation model is used to estimate for each subject with missing <span style="color:blue;">cvd</span> its actual value, given all other predictor (including outcome) values 
+
+- This is also called the imputation model
+:::
+
+## Single imputation by regression
+
+![](Picture 3.png){width=100%}
+
+## Single imputation by regression
+
+![](Picture 4.png){width=100% height=600}
+
+## Single imputation by regression
+
+![](Picture 5.png){width=100% height=600}
+
+## Single imputation by regression
+
+![](Picture 6.png){width=100% height=600}
+
+## Single imputation by regression
+
+![](Picture 7.png){width=100%}
+
+## Single imputation by regression
+
+![](Picture 8.png){width=100%}
+
+## Single imputation by regression
+
+![](Picture 9.png){width=100%}
+
+
+## Single imputation by regression
+
+![](Picture 10.png){width=100%}
