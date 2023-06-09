@@ -1,0 +1,143 @@
+---
+title: "Types of missing data"
+author: "K.G.M. Moons, PhD"
+format: revealjs
+engine: knitr
+---
+
+## Introduction
+
+Study is completed:
+
+- All patients measured
+- Determinants/predictors/covariates/independent variables/X’n AND the outcome/dependent variable/Y
+- Data in computer 
+- Descriptive/frequency tables - MISSINGS
+
+## Introduction
+
+- MISSINGS = problems -> precision + validity
+- TO PREVENT IS BETTER THAN TO CURE
+
+## Introduction
+::: {style="font-size: 0.85em"}
+- Missing data always occur (any study):
+
+    - retrospective and prospective 
+    - existing (routine care) databases
+    - large scale population-based 
+    - (even!) well organised randomised trials
+
+- Challenge: how proper analyses with missing values?
+
+    - unbiased effect estimates (validity)
+    - precise effect estimates (precision) 
+:::
+
+## Introduction
+
+- Epidemiological analyses:
+
+    - Association determinants (predictors/ covariates/confounders) with outcome
+    - Multivariable (regression) analyses
+    - What happens with participant record if one variable (X or Y) is missing?
+
+::: {style="font-size: 0.5em"}
+- = complete case (CC) analyses 
+- = most common
+- = always affects precision effect estimates (not all data used)
+- = commonly causes bias
+:::
+
+## Introduction
+
+- Most (epidemiological) studies use complete case analysis or other methods to handle missings that cause bias.
+
+- Type and severity bias depend on method used and type of missing data.
+
+## Type of missing values
+
+- 3 types: MCAR, MAR, MNAR
+
+    - Missing Completely At Random (MCAR)
+    - Missing At Random (MAR)
+    - Missing Not At Random (MNAR)
+
+## Type of missing values
+
+- If MCAR holds, almost all analytical methods (see later) for handling missing data give unbiased results, although less precise
+
+- Realistic?
+
+    - Reason: missing related to other patient characteristics, including outcome (!!!)     
+    - = MAR = missing at random
+
+## Type of missing values
+
+**2. Missing At Random (MAR)**
+
+- Probability that an observation is missing depends only on other observed values (patient characteristics, including the outcome)
+
+Most advanced methods to handle missing values under MAR yield less biased and more precise estimates -> see later 
+
+## Type of missing values
+
+**3. Missing Not At Random (MNAR)**
+
+::: {style="font-size: 0.85em"}
+- The probability that an observation is missing depends also on unobserved values.
+
+- E.g. probability of missing on a variable depends on the true (but unknown) value of that variable itself 
+
+- Examples
+
+    - sexual preference 
+    - income level (to estimate SES) 
+        
+          - higher levels values have larger probability of being missed than lower values
+:::
+
+## Type of missing values
+::: {style="font-size: 0.9em"}
+- Missing data seldom (if ever) MCAR
+
+- MNAR = problems -> no general methods for properly dealing with MNAR data!
+
+- Fortunately, most clinical problems MAR 
+
+    - Methods to properly deal with them 
+
+How to check likelihood of missing data being MCAR or rather MAR?
+
+Next slide = very important table in empirical research!
+:::
+
+## ...
+::: {style="font-size: 0.5em"}
+Table. Distribution of co-variates among subjects without and with missing values (total n=398).
+:::
+
+![](Picture 1.png){width=100% height=500}
+
+## Testing for MCAR/MAR
+::: {style="font-size: 0.7em"}
+- Missing data CLEARLY not MCAR 
+
+    - Analyzed subset of 246 subjects is not random subset of the original study sample (N=398) –> SELECTION bias due to missings
+    - Missing related to other observed characteristics (incl. outcome)= MAR
+    - If missingness related to observed characteristics – these can be used to estimate/predict the missing values!
+    - Missing could still partly MNAR – but also MAR. Cannot test for MNAR – only reduce MNAR-part as much as possible by including many observed chars (increasing MAR)
+
+Compare: adjustment for known confounders (MAR) versus residual confounders (MNAR)
+
+- NOTE: if table shows no difference, does not mean indeed MCAR -> notably for missing outcomes in RCTs
+
+    - See later. (Groenwold RH et al: CMAJ 2014 + AM J EPI 2012)
+:::
+
+# Thank you for your attention 
+
+
+
+
+
