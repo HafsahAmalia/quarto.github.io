@@ -1,0 +1,91 @@
+---
+title: "Imputation via Fully Conditional Specification"
+author: "Thomas Debray, PhD"
+format: revealjs
+engine: knitr
+---
+
+## Imputation via Fully Conditional Specification
+
+![](Picture 1.png){width=100%}
+
+
+## Imputation via Fully Conditional Specification
+
+::: {style="font-size: 0.7em"}
+**Two situations**
+
+- 1 missing covariate
+
+    - Straightforward implementation
+    - No Gibbs sampler needed
+    - Try this at home!
+
+- $>1$ missing covariate
+
+    - Implementation more complicated
+    - Requires a Gibbs sampler
+    - Implemented by numerous software packages
+:::
+
+## One covariate missing
+
+![](Picture 2.png){width=100%}
+
+## One covariate missing
+
+![](Picture 3.png){width=100%}
+
+
+## One covariate missing
+
+![](Picture 4.png){width=100%}
+
+
+## One covariate missing
+
+![](Picture 5.png){width=100%}
+
+
+## One covariate missing
+
+![](Picture 6.png){width=100%}
+
+
+## > 1 covariate missing
+
+We need to estimate an imputation model for each missing covariate. However, 
+
+- Subjects typically have one or more missing observations => the complete dataset may be too small for estimating the imputation models!
+- Subjects with complete data may differ from subjects with one or more missing observations
+- **How to use information from subjects with partially observed data?**
+
+## > 1 covariate missing
+
+Each imputation model needs to be estimated using imputed data! Similar to imputation via Joint Modelling, this requires the implementation of a Gibbs sampler.
+
+![](Picture 7.png){width=100%}
+
+## Imputation via Fully Conditional Specification
+
+**How to implement imputation via FCS?**
+
+- The R package “mice” offers many methods.
+
+  Extensions for multilevel data have been implemented in the R package “micemd”
+
+- Many other packages are available, see
+
+  https://cran.r-project.org/web/views/MissingData.html
+  
+
+## Imputation via Fully Conditional Specification
+
+**Key issues**
+
+- The conditional distributions should be compatible (that is, they should describe a joint distribution)
+
+  This will be discussed in the next lecture
+
+
+
