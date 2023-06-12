@@ -1,0 +1,326 @@
+---
+title: "Design and reporting of studies with missing data"
+author: "KGM Moons (Carl)"
+format: revealjs
+engine: knitr
+---
+
+## Content
+
+- Why do missing data occur and is it only an ‘analysis’ issue?
+- Thinking about missing data in the design phase
+
+    - e.g. Missing outcomes in diagnostic research 
+
+- General guidance on reporting missing data
+
+## Let’s go back… way back…
+
+How do we start a medical study:
+
+(for diagnostic, etiologic, prognostic and therapeutic studies):
+
+- Interesting research question
+- Choosing the design (e.g. cross-sectional, cohort, RCT)
+- Oftentimes a multivariable problem, so measuring multiple variables
+- Protocol, methods and planning data collection
+- **Start of data collection**
+
+## …..data collection…..
+
+After data collection: ‘*Get in touch with the data*’
+
+After assessing descriptives and frequency tables confronted with:
+
+**Missing values**
+
+## Reasons for missing data
+
+As we all know by now there are various reasons for missing values:
+
+::: {style="font-size: 0.8em"}
+- Lost forms
+- Dropped containers with blood
+- Un-answered questions on income or sexual preference
+- Drop-outs in RCTs
+- Loss-to-follow up in longitudinal cohorts
+- Patient not fit enough to undergo certain tests
+- Unethical (too invasive test in mild patient)
+- Etc……
+:::
+
+
+## Problem of missing data
+
+Missing values may lead to:
+
+- Bias 
+- Loss of precision
+
+Missing values are a serious problem;
+
+TO PREVENT IS BETTER THAN TO CURE!
+
+## Missing data not only an ‘analysis issue’
+
+- The dominant theme of the course has been handling missing data in the analysis phase of a study.
+- Usually we are ‘confronted’ with the problem after data collection. However, oftentimes, missing data can be anticipated!
+- Particularly true for missing outcome data. For longitudinal studies as well as cross-sectional (i.e. diagnostic) studies.
+
+## Missing outcomes in diagnostic research
+
+::: {style="font-size: 0.8em"}
+- Groenwold CMAJ 2014 states:
+
+“Plans to deal with missing outcome data should be prespecified in the trial protocol, because standard intention-to-treat analyses may be biased in the event of missing outcomes.”
+
+- This needs thorough consideration of (probable) future missing data in the design phase of a study.
+- How to think about missing data in the design phase I will illustrate using a specific missing data problem:
+
+*Missing reference standard results in diagnostic studies*
+:::
+
+## Cross-sectional diagnostic accuracy design
+
+![](Picture 1.png){width=100% height=500}
+
+
+## ...
+
+Results obtained using a **reference standard may be missing** for some participants in diagnostic accuracy studies.
+
+KEY QUESTION:
+
+How can we deal with such **missing data** when designing diagnostic accuracy study?
+
+
+Naaktgeboren et al 2017 BMJ
+
+
+## Patterns of missing outcomes
+
+::: {style="font-size: 0.5em"}
+Clinical example (Ahmed et al 2015)
+In a diagnostic study assessing the accuracy of a new rapid test to diagnose Malaria, blood samples were lost and could not be verified by the reference standard (i.e. microscopy). 
+
+
+What is the probable pattern of missing data?
+
+a. MCAR			
+b. MAR			
+c. MNAR
+:::
+
+
+![Incidental missings](Picture 2.png){width=50% height=300}
+
+
+## Patterns of missing outcomes
+
+::: {style="font-size: 0.5em"}
+Clinical example (Cervical cancer project 1999)
+In a diagnostic study assessing the accuracy of visual inspection with acetic acid to diagnose cervical cancer. All acetic acid test positives are referred for the reference test, and a random subset of the subjects with a negative acetic acid test underwent the invasive/costly reference standard (i.e. colposcopy + biopsy). 
+
+What is the probable pattern of missing data?
+
+a. MCAR			
+b. MAR			
+c. MNAR
+:::
+
+
+![Data missing by study design](Picture 3.png){width=50% height=300}
+
+
+## Patterns of missing outcomes
+
+::: {style="font-size: 0.5em"}
+Clinical example (Holtman et al 2013)
+In a diagnostic study assessing the accuracy of faecal calprotectin
+to diagnose inflammatory bowel disease, only high risk patients, as judged by various patient charareceived the invasive reference standard (i.e. endoscopy + biopsy). 
+
+
+What is the probable pattern of missing data?
+
+a. MCAR			
+b. MAR			
+c. MNAR
+:::
+
+
+![Data missing do tue clinical practice](Picture 4.png){width=50% height=300}
+
+
+## Patterns of missing outcomes
+
+::: {style="font-size: 0.7em"}
+Clinical example (Lehman et al 2012)
+
+In a diagnostic study assessing the accuracy of ultrasonography to diagnose breast cancer the reference standard (i.e. biopsy) could only be performed in patients with an abnormal ultrasonography result.
+
+What is the difficulty? What should we do?
+:::
+
+![Data missing do tue infeasibility](Picture 5.png){width=50% height=300}
+
+## Using a second (best) reference standard
+
+::: {style="font-size: 0.7em"}
+Instead of correcting for missing reference standard results one could also use an alternative, second best, reference test in those subjects where the result of the first, preferred reference test can or will not be obtained.
+:::
+
+![](Picture 6.png){width=100% height=500}
+
+
+## Using a second (best) reference standard
+
+::: {style="font-size: 0.7em"}
+**Clinical example (Lehman et al 2012)**
+
+In a diagnostic study assessing the accuracy of ultrasonography to diagnose breast cancer the reference standard (i.e. biopsy) could only be performed in patients with an abnormal ultrasonography result.
+:::
+
+![](Picture 7.png){width=25% height=150}
+
+
+::: {style="font-size: 0.7em"}
+**What should we report?**
+
+Predictive values per reference standard can be calculated. 
+Do not simply combine the two-by-two tables! As the 2 reference standards are of different quality, this will lead to biased results!
+:::
+
+
+## Options for analysis
+
+![](Picture 8.png){width=50%}
+
+
+## Options for analysis
+
+![](Picture 9.png){width=100%}
+
+
+## Options for analysis
+
+![](Picture 10.png){width=100%}
+
+
+## Analysis of incidental missings
+
+![](Picture 11.png){width=100%}
+
+## Analysis of incidental missings
+
+Complete case analysis likely to be ok
+
+![](Picture 12.png){width=100%}
+
+
+## Analysis of data missing by study design
+
+![](Picture 13.png){width=100%}
+
+
+## Analysis of data missing by study design
+
+Reweight (Inverse Probability Weighing)
+
+![](Picture 14.png){width=100%}
+
+## Analysis of data missing due to clinical practice
+
+![](Picture 15.png){width=100%}
+
+## Analysis of data missing due to clinical practice
+
+![](Picture 16.png){width=40%}
+
+
+::: {style="font-size: 0.7em"}
+- Use Multiple imputation
+- Or Bayesian correction method
+
+    - Apply secondary reference + obtain and incorporate external data 
+    - on its imperfection
+:::
+
+
+![](Picture 17.png){width=50%}
+
+
+## Analysis of data due to infeasibility
+
+![](Picture 18.png){width=100%}
+
+
+## Analysis of data due to infeasibility
+
+- Report two separate 2x2 tables
+- Report predictive values
+
+    - PPV  = 25/(25+125) (with respect to Biopsy)
+    - NPV = 949/(1+949) (with respect to follow-up)
+
+![](Picture 19.png){width=100%}
+
+
+## Options in the design phase
+
+- Take measures to **prevent missing results** on preferred reference standard and, if applicable, on any other reference standard used.
+- **Document** reasons for missing results on preferred and, if applicable, any other reference standard used
+
+
+## Options in the design phase
+
+![](Picture 20.png){width=100%}
+
+## In summary
+
+::: {style="font-size: 0.85em"}
+**Specifically for missing reference standard data**
+
+- Missing reference standard results should be avoided, but this is often inevitable
+- Analytical solutions are available
+
+    - They require knowledge about the outcome verification pattern
+    - However, they are no substitute for complete data
+
+- **In general**
+
+- Measures can and should be taken already in the design phase of a study to faciliate correction methods for missing data
+- Always important to clearly report missing data!!
+:::
+
+
+## Reporting missing data
+
+::: {style="font-size: 0.85em"}
+- Almost all studies have some missing outcome or predictor data
+- Yet, few studies explicitly discuss missing data, and even fewer attempt to address the issue statistically.
+- In the absence of a mention of missing data, it is reasonable to assume that participants with missing data have been omitted from any analyses, leading to a so-called complete-case analysis.
+- As we know by now, omitting data from any analyses is hardly ever the best approach. If we do something different, we should report this.
+:::
+
+## Reporting missing data
+
+**Main message**
+
+- Carefully report details about missing data and describe how these were handled. If individuals with any missing values are excluded from the analysis, then this should be clearly stated in the eligibility criteria, with a rationale for the exclusion.
+
+- There is some specific guidance on reporting missing data in diagnostic and prognostic modelling studies (TRIPOD) and missing outcomes in trials (Groenwold CMAJ 2014) that actually applies to all types of medical research
+
+## Reporting missing data (based on TRIPOD)
+
+![](Picture 21.png){width=100%}
+
+## Reporting missing outcomes in trials (CMAJ 2014)
+
+![](Picture 22.png){width=100%}
+
+
+## Any remaining questions??
+
+**Next is the Exam**
+
+<span style="color:blue;">GOOD LUCK!</span>
