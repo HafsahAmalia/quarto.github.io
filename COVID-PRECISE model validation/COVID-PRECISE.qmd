@@ -1,0 +1,279 @@
+---
+title: "Clinical prediction models for mortality in COVID-19 patients:"
+subtitle: "An external validation and individual participant data meta-analysis (COVID-PRECISE)"
+author: "Thomas Debray, PhD"
+format: revealjs
+engine: knitr
+---
+
+## Background
+
+COVID-19 is a clinically heterogeneous disease of varying severity and prognosis. (1) Risk stratification tools have been developed to target prevention, management, and/or treatment strategies for individuals who are at highest risk of a poor outcome.
+
+\
+Wynants and colleagues (update 3, 12 January 2021; <span style="color:blue;"> covprecise.org</span>) (2), identified 39 such prognostic models for poor outcome.
+
+## Background
+
+::: {style="font-size: 0.9em"}
+Prediction models often perform worse than anticipated and suffer from poor calibration when applied to new individuals, especially when models are applied outside the settings where they were originally developed. 
+
+\
+Clinical implementation of poorly performing models leads to incorrect predictions and may thereby lead to unnecessary interventions or important interventions being withheld. Both result in potential harm to patients and inappropriate use of medical resources. Therefore, prediction models should always be externally validated before clinical implementation. (2-5)
+:::
+
+## Objective
+
+We aimed to validate the most promising prediction models for short-term mortality, that we could identify. 
+We consider not only the average model calibration and discrimination in external data, but also the generalizability to other (clusters within) data sources.
+
+## Methods: identify COVID prediction models
+
+::: {style="font-size: 0.7em"}
+We used the second update (21 July 2020) of an existing living systematic review of prediction models for COVID-19 to identify multivariable prognostic models and scoring rules for assessing short term (30 days or in-hospital) mortality in patients hospitalised with COVID-19. (6) 
+
+\
+That review assessed the quality and risks of bias of the models reported in eligible studies identified through the Living Evidence on COVID-19 (7) and the arXiv repository. 
+
+\
+During update three of the living review, (8) additional models were found that also met the study eligibility criteria of this IPDMA, which we also included for external validation. 
+:::
+
+## Methods: identify external validation data
+
+::: {style="font-size: 0.85em"}
+We searched for individual studies, registries, and data sharing platforms with individual patient data of hospitalised COVID-19 patients, through:
+
+- manual searches
+- the living systematic review by Wynants et al. (6) 
+- the PROSPERO database.
+- references of published prediction models for COVID-19, 
+- contacting experts in prognosis research and infectious diseases.
+:::
+
+## Methods: inclusion criteria validation data
+
+::: {style="font-size: 0.85em"}
+- Data sources were eligible for model validation if they contained data on mortality endpoints (in-hospital or 30-day mortality) for consecutively hospitalised COVID-19 patients. 
+- For trial data that were used to develop or validate a prognostic COVID-19 model, we included only patients receiving regular (that is, not experimental) care. 
+- We included only patients with a PCR-confirmed SARS-CoV-2 infection. 
+- We excluded patients for whom no laboratory data were recorded in the first 24 hours of admission.
+:::
+
+## Ethical approval
+
+The need for ethical approval was waived by the METC Utrecht (protocol number 21-225).
+
+## Statistical analyses
+
+We performed an external validation and meta-analysis in two stages:
+
+1. Impute missing data and estimate performance metrics in individual clusters (=hospital, cohort or data source)
+2. Perform a meta-analysis of the performance metrics across clusters (11, 12)
+
+## Statistical analyses: stage 1
+
+::: {style="font-size: 0.85em"}
+- We imputed sporadically missing data 50 times using MICE. (13)
+- For each of the models, we calculated the mortality risk or mortality score of all participants, in clusters where the respective models’ predictors were measured in at least some of the participants.
+- Subsequently, for each model in each imputed cluster we calculated:
+
+    - concordance (c)-statistic,
+    - observed vs expected ratio (O:E ratio), 
+    - calibration slope, 
+    - calibration-in-the-large
+
+- Then we applied Rubin’s rules (on the log or logit scale, where applicable).
+:::
+
+## Statistical analyses: stage 2
+
+::: {style="font-size: 0.85em"}
+- We pooled each of the model performance metrics across the clusters of stage one (on the log or logit scale, where applicable). (14)
+- We used restricted maximum likelihood estimation (REML) and the Hartung-Knapp-Sidik-Jonkman method to derive all confidence intervals. (15,16)
+- We constructed approximate 95% prediction intervals (95% PI), to indicate probable ranges of performance expected in new clusters. (17) 
+- We performed the analysis in R (version 4.0.0 or later, using packages mice, pROC, and metamisc) and we repeated the main analyses in STATA.
+:::
+
+## Results: review of models
+
+::: {style="font-size: 0.85em"}
+We identified six prognostic models and two scoring rules that met the inclusion criteria, for a total of eight (see final slides).
+
+- Bello-Chavolla et al score
+- Xie et al model
+- Hu et al model
+- Zhang et al DCS model
+- Zhang et al DCSL model
+- Knight et al 4C Mortality Score
+- Wang et al clinical model  
+- Wang et al laboratory model
+:::
+
+## Results: review of models
+
+![](Picture 1.png){width=100%}
+
+## Results: review of models
+
+![](Picture 2.png){width=100%}
+
+## Results: review of validation data
+
+![](Picture 3.png){width=100%}
+
+## Results: Countries of origin of included data
+
+![](Picture 4.png){width=100%}
+
+
+## Results: description of validation data
+
+- Study recruitment periods were between 10 January and 29 December 2020.
+- All were PCR-confirmed COVID-19 hospital patients
+
+    - 820 were admitted through cardiology
+    - Some clusters included only emergency care (383) or ICU patients (17).
+
+- The mean age ranged from 45 to 71. 
+- Percentage males varied from 45% to 74%.
+
+## Results: available clusters for validation
+
+![](Picture 5.png){width=100%}
+
+## Results
+
+For brevity, we report only the four models with highest discrimination on average
+
+
+## Results: observed vs expected
+
+![](Picture 6.png){width=100%}
+
+## Results: calibration slope
+
+![](Picture 7.png){width=100%}
+
+
+## Results: discrimination
+
+![](Picture 8.png){width=100%}
+
+## Discussion: main results
+
+::: {style="font-size: 0.7em"}
+- The 4C Mortality Score by Knight et al. (8 predictors), the clinical model by Wang et al. (3 predictors) and the model by Xie et al. (4 predictors) achieved the highest discrimination on average. 
+
+    - But discrimination varied greatly across hospitals and countries for all models, but least for the 4C Mortality score.
+
+- All models were affected by calibration issues
+
+    - We observed on average 29% fewer deaths than predicted by the 4C Mortality Score, 35% fewer than predicted by the clinical model by Wang et al. and 4% fewer than predicted by the model by Xie et al.
+    - The calibration slope was closest to one for the 4C Mortality Score, and it was the only one for which the 95% CI included 1.
+    - 95% prediction intervals for calibration measures were large
+:::
+
+
+## Discussion: limitations
+
+- The evolution and management of the virus and related disease consequences change over time and across geographical areas.
+- The studied models were developed and validated using data from the first waves, before vaccination was common.
+- The prediction models are typically used to decide upon treatment strategies, but do not indicate to what extent patients benefit from individualized treatment decisions. 
+- We had to use the reported nomograms to recover the intercepts for two prediction models from one group
+
+
+## Conclusion
+
+::: {style="font-size: 0.7em"}
+- This large international study found considerable heterogeneity in the performance of the prognostic models for predicting short-term mortality in patients hospitalised with COVID-19 across countries. Caution is therefore needed in applying these tools for clinical decision making.
+- On average, the observed number of deaths was closest to the predicted number of deaths by the model by Xie et al. On average, the 4C Mortality Score by Knight et al. and the clinical model by Wang et al., had the highest discriminative ability as compared to other validated models. They appear most promising, although local adjustments (intercept and slope updates) are needed before implementation in routine care.
+:::
+
+## Disclaimer
+
+The views expressed in this paper are the personal views of the authors and may not be understood or quoted as being made on behalf of or reflecting the position of the regulatory agency/agencies or organizations with which the authors are employed/affiliated.
+
+## Open science
+
+- Statistical analyses registered at <span style="color:blue;">https://osf.io/fk9x3/</span> 
+- All R code is available from <span style="color:blue;">github.com/VMTdeJong/COVID-19_Prognosis_IPDMA</span>
+
+# Footnotes & references
+
+## Acknowledgements
+
+::: {style="font-size: 0.5em"}
+This study is supported by ReCoDiD (Reconciliation of Cohort data in Infectious Diseases; www.recodid.eu), COVID-PRECISE (Precise Risk Estimation to optimise COVID-19 Care for Infected or Suspected patients in diverse sEttings; www.covprecise.org), and CAPACITY-COVID (capacity-covid.eu). Together we form a large unique group of researchers and medical care providers who are actively involved in data gathering, management, sharing and analysis.
+We want to express our gratitude and appreciation to all participating sites and researchers part of the COVID-PRECISE consortium and of the CAPACITY-COVID collaborative consortium. CAPACITY-COVID gratefully acknowledges the following organizations for their assistance in the development of the registry and/or coordination regarding the data registration in the collaborating centres: partners of the Dutch CardioVascular Alliance (DCVA), the Dutch Association of Medical Specialists (FMS), and the British Heart Foundation Centres of Research Excellence. In addition, the consortium is grateful for the endorsement of the CAPACITY-COVID initiative by the European Society of Cardiology (ESC), the European Heart Network (EHN), and the Society for Cardiovascular Magnetic Resonance (SCMR). Furthermore, the consortium appreciates the endorsement of CAPACITY-COVID as a flagship research project within the National Institute for Health Research (NIHR)/British Heart Foundation (BHF) Partnership framework for COVID-19 research. 
+:::
+
+## Funding
+
+::: {style="font-size: 0.5em"}
+- This project has received funding from the European Union's Horizon 2020 research and innovation programme under ReCoDID grant agreement No 825746.
+- This research was supported by the NIHR Leicester Biomedical Research Centre. Rishi Gupta RKG is supported by the National Institute for Health Research. Mahdad Noursadeghi is supported by the Wellcome Trust (207511/Z/17/Z) and by NIHR Biomedical Research Funding to UCL and UCLH. Martin Modrák is supported by ELIXIR CZ research infrastructure project (MEYS Grant No: LM2018131) including access to computing and storage facilities.
+- The CAPACITY-COVID registry is supported by the Dutch Heart Foundation (2020B006 CAPACITY), ZonMw (DEFENCE 10430102110006),  the EuroQol Research Foundation, Novartis Global, Sanofi Genzyme Europe, Novo Nordisk Nederland, Servier Nederland, and Daiichi Sankyo Nederland. The Dutch Network for Cardiovascular Research (WCN), a partner within the CAPACITY-COVID consortium, received funding from the Dutch Heart Foundation (2020B006 CAPACITY) for site management and logistic support in the Netherlands.  Marijke Linschoten is supported by the Alexandre Suerman Stipend of the University Medical Center Utrecht. Folkert W. Asselbergs is supported by CardioVasculair Onderzoek Nederland 2015-12 eDETECT and by the National Institute of Health Research (NIHR) University College London Hospitals Biomedical Research Centre.
+- Laure Wynants and Ben Van Calster are supported by the COPREDICT grant from the University Hospitals KU Leuven, and by Internal Funds KU Leuven (C24M/20/064).
+- The funders had no role in the study design; in the collection, analysis, and interpretation of data; in the writing of the report; and in the decision to submit the article for publication in the analysis and interpretation of data, in the writing of the report, and in the decision to submit the article for publication. We operated independently from the funders. 
+:::
+
+## Included prediction models and scores
+
+::: {style="font-size: 0.5em"}
+- Zhang H, Shi T, Wu X, Zhang X, Wang K, Bean D, et al. Risk prediction for poor outcome and death in hospital in-patients with COVID-19: derivation in Wuhan, China and external validation in London, UK. medRxiv. 2020 May 3;2020.04.28.20082222. 
+- Xie J, Hungerford D, Chen H, Abrams ST, Li S, Wang G, et al. Development and external validation of a prognostic multivariable model on admission for hospitalized patients with COVID-19. medRxiv. 2020 Apr 7;2020.03.28.20045997. 
+- Wang K, Zuo P, Liu Y, Zhang M, Zhao X, Xie S, et al. Clinical and Laboratory Predictors of In-hospital Mortality in Patients With Coronavirus Disease-2019: A Cohort Study in Wuhan, China. Clinical Infectious Diseases. 2020 Nov 19;71(16):2079–88. 
+- Knight SR, Ho A, Pius R, Buchan I, Carson G, Drake TM, et al. Risk stratification of patients admitted to hospital with covid-19 using the ISARIC WHO Clinical Characterisation Protocol: development and validation of the 4C Mortality Score. BMJ. 2020 Sep 9;370:m3339. 
+- Hu C, Liu Z, Jiang Y, Zhang X, Shi O, Xu K, et al. Early prediction of mortality risk among severe COVID-19 patients using machine learning. medRxiv. 2020 Apr 19;2020.04.13.20064329. 
+- Bello-Chavolla OY, Bahena-López JP, Antonio-Villa NE, Vargas-Vázquez A, González-Díaz A, Márquez-Salinas A, et al. Predicting Mortality Due to SARS-CoV-2: A Mechanistic Score Relating Obesity and Diabetes to COVID-19 Outcomes in Mexico. The Journal of Clinical Endocrinology & Metabolism. 2020 Aug 1;105(8):2752–61. 
+:::
+
+## References
+
+::: {style="font-size: 0.35em"}
+1. Smith GD, Spiegelhalter D. Shielding from covid-19 should be stratified by risk. BMJ. 2020 May 28;369:m2063
+2. Siontis GCM, Tzoulaki I, Castaldi PJ, Ioannidis JPA. External validation of new risk prediction models is infrequent and reveals worse prognostic discrimination. J Clin Epidemiol. 2015 Jan 1;68(1):25–34. 
+3. Altman DG, Vergouwe Y, Royston P, Moons KGM. Prognosis and prognostic research: validating a prognostic model. BMJ. 2009 May 28;338(may28 1):b605–b605. 
+4. Moons KGM, Kengne AP, Grobbee DE, Royston P, Vergouwe Y, Altman DG, et al. Risk prediction models: II. External validation, model updating, and impact assessment. Heart. 2012 May 1;98(9):691–8. 
+5. Bleeker SE, Moll HA, Steyerberg EW, Donders ART, Derksen-Lubsen G, Grobbee DE, et al. External validation is necessary in prediction research:: A clinical example. J Clin Epidemiol. 2003;56(9):826–32. 
+6. Wynants L, Calster BV, Collins GS, Riley RD, Heinze G, Schuit E, et al. Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal (update 2, 21 July 2020). BMJ [Internet]. 2020 Jul 21;369. Available from: https://www.bmj.com/content/369/bmj.m1328 
+7. COVID-19 Open Access Project. Living Evidence on COVID-19 [Internet]. 2020. Available from: https://ispmbern.github.io/covid-19/living-review/
+8. Wynants L, Calster BV, Collins GS, Riley RD, Heinze G, Schuit E, et al. Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal (update 3, 12 January 2021). BMJ. 2020 Apr 7;369:m1328. 
+9. Riley RD, Lambert PC, Abo-Zaid G. Meta-analysis of individual participant data: rationale, conduct, and reporting. BMJ. 2010;340:c221. 
+10. Debray TPA, Moons KGM, Abo-Zaid GMA, Koffijberg H, Riley RD. Individual Participant Data Meta-Analysis for a Binary Outcome: One-Stage or Two-Stage? PLoS ONE. 2013 Apr 9;8(4):e60650. 
+11. Debray TPA, Damen JAAG, Snell KIE, Ensor J, Hooft L, Reitsma JB, et al. A guide to systematic review and meta-analysis of prediction model performance. BMJ. 2017 Jan 5;356:i6460. 
+12. Debray TPA, Damen JAAG, Riley RD, Snell K, Reitsma JB, Hooft L, et al. A framework for meta-analysis of prediction model studies with binary and time-to-event outcomes. Stat Methods Med Res. 2019 Sep;28(9):2768–86. 
+13. Buuren S, Groothuis-Oudshoorn K. mice: Multivariate imputation by chained equations in R. J Stat Softw [Internet]. 2011;45(3). Available from: http://doc.utwente.nl/78938/
+14. Snell KIE, Ensor J, Debray TPA, Moons KGM, Riley RD. Meta-analysis of prediction model performance across multiple studies: Which scale helps ensure between-study normality for the C-statistic and calibration measures? Stat Methods Med Res. 2018;27(11):3505–22. 
+15. Knapp G, Hartung J. Improved tests for a random effects meta-regression with a single covariate. Stat Med. 2003;22(17):2693–710. 
+16. Sidik K, Jonkman JN. Robust variance estimation for random effects meta-analysis. Comput Stat Data Anal. 2006;50(12):3681–701. 
+17. Higgins JPT, Thompson SG, Spiegelhalter DJ. A re-evaluation of random-effects meta-analysis. J R Stat Soc Ser A Stat Soc. 2009;172(1):137–59. 
+:::
+
+# Sensitivity analysis
+
+## Sensitivity analysis: statistical methods
+
+::: {style="font-size: 0.7em"}
+In none of the included data sets, all the predictors from every model were recorded. Hence, the prognostic models were validated on different data, which hampered the interpretation. 
+
+\
+Therefore, for each performance measure taken separately, we performed a meta-regression on all performance estimates where we included country and model as (dummy)predictors, which we had not pre-specified in our protocol. 
+
+\
+Then, we used these meta-models to predict the performance (and 95% CI) of each prediction model in each included country, thereby allowing for a fairer comparison of the performance between models. 
+:::
+
+
+## Sensitivity analysis: results
+
+::: {style="font-size: 0.7em"}
+In the meta-regression we regressed logit c-statistic estimates on the country and the prediction model (both as dummy variables).
+
+\
+This accounts for the differences in possible model discrimination between the data sources.
+:::
+
+![](Picture 9.png){width=100%}
+
