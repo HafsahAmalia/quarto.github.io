@@ -1,0 +1,311 @@
+---
+title: "Future applications of Data Science in HealthCare"
+author: "Thomas Debray, PhD"
+format: revealjs
+engine: knitr
+---
+
+## Background
+
+With recent advances in the collection of real-world data (RWD), there is a growing demand to leverage real-world evidence (RWE) in decision making
+
+\
+**Focus of today**
+
+- Investigation of treatment effectiveness in real-world settings
+
+## Background
+
+- RWE is increasingly recognised as being complementary to clinical trials in comparative effectiveness research 
+- The regulatory acceptance of RWE presents a challenge to other healthcare decision-makers for use of RWD
+- Methodological advances addressing limitations of RWD have not been widely applied in healthcare decision making
+- Lack of methodological frameworks has been widely recognised as a major cause of the low uptake of cross study design in decision making.
+
+## What are non-randomized studies?
+
+- Source of Real-World Data
+- Observational studies where the assignment of patients to a therapeutic product is not determined by a trial protocol
+- Diagnostic or monitoring procedures represent routine clinical practice
+
+NRS data can be collected either prospectively or retrospectively by observation in routine clinical practice, and can be analysed using epidemiological (biostatistical) methods.
+
+::: {style="font-size: 0.3em"}
+European Network of Centres for Pharmacoepidemiology and Pharmacovigilance (ENCEPP). ENCEPP Considerations on the Definition of Non-Interventional Trials under the Current Legislative Framework (“Clinical Trials Directive” 2001/20/Ec), 2011
+Makady A, de Boer A, Hillege H, et al. What is real-world data? A review of definitions based on literature and Stakeholder interviews. Value Health 2017;20:858–65
+:::
+
+## Comparative effectiveness research using NRS
+
+::: {style="font-size: 0.7em"}
+**Aim**: to enable the trustworthy generation of results from combining NRS and RCT data. We provided recommendations on how to:
+
+1. appraise the quality of NRS evidence
+2. select the most reliable NRS evidence for a quantitative analysis with RCTs, and 
+3. appropriately use of various statistical approaches.
+
+**Development**: a multi-methods approach (systematic reviews, Delphi survey, snowballing approach^)
+:::
+
+::: {style="font-size: 0.3em"}
+^ IMI] GetReal, FDA RWE Framework, ICER, EMA, Duke-Margolis Institute, HTA bodies, ISPE, ISPOR and publications from selected journals (such as Clinical Pharmacology and Therapeutics, Research, Synthesis Method and Statistics in Medicine).
+:::
+
+## Comparative effectiveness research using NRS
+
+::: {style="font-size: 0.7em"}
+The next slides are based on the following talks:
+
+- <span style="color:green;">20th April 2021</span>. Reliably Synthesizing Evidence from Non-Randomized Studies and RCTs in Healthcare Decision Making; a proposed ISPE endorsed Framework. 
+  
+  NICE Technical Forum. Sarri G & Debray TP.
+- <span style="color:green;">22th June 2021</span>. Bridging Evidence Gaps in HTA – Building confidence in Analytical Methods for Combining Results from Randomized and Non-Randomized studies. 
+
+  HTAi RWE Panel. Sarri G, Debray TP, Dias S, Dawoud D.
+- 27th July 2021. New RWE frameworks, new analytical methods but not yet much HTA acceptance; what is next? 
+
+  Visible Analytics Expert Workshop. Dawoud D, Dias S, Debray TP & Sarri G. <span style="color:blue;">https://visibleanalytics.co.uk/va-webinar-july-27th-2021rwe-in-hta/</span>
+:::
+
+## Comparative effectiveness research using NRS
+
+![](Picture 1.png){width=100%}
+
+## Main Steps of the Framework
+
+![](Picture 2.png){width=100%}
+
+
+## Steps 1-4
+
+![](Picture 3.png){width=100%}
+
+
+## Step 3: Critical appraisal of NRS
+
+![](Picture 4.png){width=100%}
+
+## Step 3: Critical appraisal of NRS
+
+![](Picture 5.png){width=100%}
+
+
+## Step 3: Critical appraisal of NRS
+
+![](Picture 6.png){width=100%}
+
+
+## Step 3: Critical appraisal of NRS
+
+![](Picture 7.png){width=100%}
+
+
+## ROBINS-I
+
+![](Picture 8.png){width=100%}
+
+
+## ROBINS-I
+
+![](Picture 9.png){width=100%}
+
+
+## ROBINS-I
+
+![](Picture 10.png){width=100%}
+
+
+## Step 5: selecting the analytical scenario
+
+::: {style="font-size: 0.7em"}
+NRS results should only be pooled with RCT data if:
+
+- Existing RCTs have important limitations
+
+  (e.g. sample size, high risk of bias, low applicability/relevance)
+- NRS do not have high risk of bias
+  
+  (e.g. as assessed by ROBINS-I)
+- NRS do not have low applicability
+
+- *This approach differs from that recommended in RCTs meta-analyses, where low-quality studies are usually only excluded in a sensitivity analysis.*
+:::
+
+
+## Step 5: selecting the analytical scenario
+
+::: {style="font-size: 0.7em"}
+Framework recommends to select among 3 analytical scenarios according to:
+
+- Clinical context (‘relevance or applicability’)
+- Completeness of RCT data (‘evidence gaps’)
+- Magnitude and direction of possible biases of NRS 
+
+  (‘rigour or quality of effect estimates’).
+
+- The scenarios are directly linked to the framework described by Duke Margolis Center for Health Policy (<span style="color:blue;">https://healthpolicy.duke.edu/projects/real-world-evidence-collaborative</span>).
+:::
+
+## Hypothetical Situations using NRS with RCTs
+
+![](Picture 11.png){width=100%}
+
+## Step 5: selecting the analytical scenario
+
+![](Picture 12.png){width=100%}
+
+
+## Key issues for meta-analysis
+
+::: {style="font-size: 0.7em"}
+When summarizing results from multiple studies, consider:
+
+- Differences in study precision 
+  
+  (e.g. reflected by standard error)
+- Differences in risk of bias & applicability
+  
+  (e.g. due to inclusion of NRS)
+- Differences in treatment effect
+  
+  (e.g. due to presence of study effects)
+
+\
+
+- Adjustment requires implementation of advanced meta-analysis methods. 
+- We recommend to first summarize results from RCTs and NRS separately.
+:::
+
+## High-evidence bar situation
+
+**When: RCTs are preferred source of inference**
+
+- Treat the NRS data as prior evidence for the RCT analyses
+- Apply bias corrections to individual NRS results 
+
+  (e.g. direct, elicited consensus, or credibility ceiling correction)
+- Restrict the contribution of non-randomized evidence by decreasing their precision
+  
+  (e.g. if there is risk of bias, or between-study heterogeneity)
+
+## Medium-evidence bar situation
+
+**When to use?**
+
+- Evidence from RCTs and NRS are considered equally relevant
+- Evidence from RCTs and NRS is different but related 
+
+![](Picture 13.png){width=100%}
+
+## Medium-evidence bar situation
+
+- Adoption of multilevel meta-analysis models
+- Design-specific estimates of treatment effect
+- Design-specific estimates of between-study heterogeneity
+- Estimates from each study can be adjusted by shifting the mean and/or inflating the variance
+- The overall treatment effect is pulled towards the results from large, homogeneous studies that share a common design.
+
+## Low-evidence bar situation
+
+**When: NRS are the preferred source of inference with high applicability**
+
+- Apply bias corrections to individual NRS results 
+
+  (e.g. direct, elicited consensus, or credibility ceiling correction)
+- Perform data-driven bias adjustments
+
+  (e.g. incorporation of bias models)
+
+![](Picture 14.png){width=100%}
+
+## Step 6: Examining heterogeneity
+
+::: {style="font-size: 0.7em"}
+Heterogeneity is likely to be present in synthesis of RCTs and NRS, and therefore should be explored:
+
+- Explicitly distinguish between evidence from 
+  
+  RCTs and NRS
+- Allow for random effects, and estimate their variance
+- Quantify heterogeneity 
+  
+  (e.g. I2, prediction intervals)
+- Explore sources of treatment effect heterogeneity
+  
+  (e.g. using meta-regression, or by modelling patient-level data)
+:::
+
+![](Picture 15.png){width=100%}
+
+## Step 7: Interpretation of effect estimates
+
+::: {style="font-size: 0.7em"}
+Important to consider:
+
+- The **quality** of the included studies (both RCTs and NRS)
+- The **robustness** of adopted analytical methods
+- The **results** of any sensitivity analyses
+
+\
+
+- Random-effects summary estimates may be of limited value in the presence of substantial heterogeneity
+- Use prediction intervals to explore impact on decision making
+:::
+
+## ...
+
+![](Picture 16.png){width=100%}
+
+## Case study: treatments for COVID-19
+
+::: {style="font-size: 0.7em"}
+- Over 500 million confirmed COVID-19 cases have been reported globally
+- Serious cases of COVID-19 typically require treatment in a secondary care setting
+- Healthcare payers want to ensure that treatments being used for COVID-19 represent an efficient use of resources. Two treatment options include
+
+    - the JAK inhibitor, baricitinib
+    - the IL-6 receptor inhibitor, tocilizumab
+
+\
+Since healthcare providers will face an “either-or” decision about these two treatments, it is important to understand their comparative effectiveness.
+:::
+
+
+## Case study: treatments for COVID-19
+
+Early evidence on treatments for COVID-19
+
+- RECOVERY trial
+- Solidarity trial
+- “living'' meta-analyses 
+
+\
+Observational data could be collected more quickly and provide timely insights for decision making. 
+
+## Case study: treatments for COVID-19
+
+European Health Data and Evidence Network (EHDEN) <span style="color:blue;">https://www.ehden.eu</span>
+
+- RWD from primary and secondary care
+- Linkage to biobanks (e.g. UK Biobank), laboratory test data (e.g. Catalan central registry of COVID-19 PCR tests), national audits (e.g. UK National Audit of Intensive Care Units)
+- Mapping to OMOP Common Data Model (version 5)
+
+## Case study: treatments for COVID-19
+
+::: {style="font-size: 0.8em"}
+**Aim**: to estimate treatment effects for COVID-19 treatments using data from the EHDEN network and to combine these observational results with data from randomised studies.
+
+\
+**Primary objectives**:
+
+- To assess comparative effectiveness and safety among Tocilizumab and Baricitinib in hospitalised patients
+- To assess comparative effectiveness and safety among Aspirin and Heparin in hospitalised patients
+
+<span style="color:blue;">https://github.com/ohdsi-studies/EhdenCovidUseCase</span>
+:::
+
+
+
+
+
+
+
