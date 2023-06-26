@@ -1,0 +1,213 @@
+---
+title: "Meta-analysis in studies of prognostic models"
+author: "Thomas Debray, PhD"
+format: revealjs
+engine: knitr
+---
+
+## Prediction
+
+Estimate something that is yet unknown
+
+- Presence of a certain disease (<span style="color:green;">diagnosis</span>)
+- Future occurrence of a particular event (<span style="color:green;">prognosis</span>)
+
+![](Picture 1.png){width=100% fig-align="center"}
+
+
+## Prediction
+
+Study and modelling of prognostic factors
+
+- Signs & symptoms
+- Medical history
+- Comorbidities
+- Biomarkers
+- …
+
+## Need for systematic reviews
+
+Abundance of prognosis studies, with poor understanding of
+
+- The predictive and incremental value of novel risk factors
+- The comparative performance of existing prediction models
+- The clinical impact of available prediction models
+
+
+**Systematic review and meta-analysis** may help to identify promising risk factors, multivariable models, to summarize their performance, and to evaluate the need for further improvements.
+
+## Example of a prognosis review
+
+**Primary objectives**
+
+::: {style="font-size: 0.5em"}
+To identify and summarize multivariable prognostic models for quantifying the risk of clinical disease progression, worsening, and activity in MS. 
+
+
+To this end we will: 
+
+- describe the characteristics of the identified multivariable prognostic models, including prognostic factors considered and evaluation measures used;
+- describe changes in outcome definitions, time frames, prognostic factors and statistical methods over time; 
+- qualitatively summarize the validation performance of the models;
+- <span style="color:red;">summarize model performance</span> across external validation studies via meta-analysis, where possible; 
+- assess the risk of bias in the models;
+- evaluate moderating effects on model performance by meta-regression, where possible; and
+- make recommendations for future MS prognostic research.
+:::
+
+
+![](Picture 2.png){width=100% fig-align="center"}
+
+## Recommended steps
+
+1. Formulating the review question
+2. Formulating the search strategy
+3. Data extraction
+4. Critical appraissal 
+5. Meta-analysis
+6. Investigating heterogeneity across studies
+7. Sensitivity analyses
+8. Reporting
+
+## Formulating the review question
+
+Describe rationale, objectives, design, methodology and statistical considerations
+
+![](Picture 3.png){width=100%}
+
+
+::: {style="font-size: 0.3em"}
+**Ref**: On Seker BI, et al. Prognostic models for predicting clinical disease progression, worsening and activity in people with multiple sclerosis. Cochrane Multiple Sclerosis and Rare Diseases of the CNS Group, editor. Cochrane Database of Systematic Reviews 2020
+:::
+
+## Data extraction
+
+![](Picture 4.png){width=100%}
+
+
+## Critical appraisal
+
+Assess risk of bias and applicability to the review question
+
+- Prognostic factors: $QUIPS^1$
+- Prognostic models: $PROBAST^2$
+
+::: {style="font-size: 0.5em"}
+$^1$Assessing bias in studies of prognostic factors. Hayden JA, et al. Ann Intern Med 2013
+
+
+$^2$PROBAST: A Tool to Assess the Risk of Bias and Applicability of Prediction Model Studies. Wolff RF, et al. Annals of Internal Medicine 2019. 
+:::
+
+## Critical appraisal
+
+![](Picture 5.png){width=100%}
+
+::: {style="font-size: 0.5em"}
+**Ref**. PROBAST: A Tool to Assess the Risk of Bias and Applicability of Prediction Model Studies. Wolff RF, et al. Annals of Internal Medicine 2019. 
+:::
+
+## Critical appraisal: an example
+
+::: {style="font-size: 0.8em"}
+Systematic review of published prediction models in relapsing remitting multiple sclerosis
+
+Key issues identified using PROBAST:
+
+- Exclusion or inappropriate imputation of participants with missing data
+- Small sample size
+- Lack of internal validation
+- Many predictors required information unavailable at the time of diagnosis such as longitudinal disease course features
+:::
+
+::: {style="font-size: 0.5em"}
+**Ref**: Brown FS, et al. Systematic review of prediction models in relapsing remitting multiple sclerosis. PLoS ONE 2020.
+:::
+
+
+## Critical appraisal: an example
+
+![](Picture 6.png){width=100% height=600}
+
+
+## Meta-analysis
+
+Fixed effect meta-analysis
+
+- The studied effect (e.g., risk factor association; prediction model performance) is identical across all studies
+- Variation only appears due to chance
+
+Random effects meta-analysis
+
+- The studied effect differs across studies
+- Variation arises from sampling error and between-study heterogeneity
+
+## Meta-analysis
+
+![](Picture 7.png){width=50% height=500}
+
+## Meta-analysis
+
+::: {style="font-size: 0.7em"}
+Risk factor associations and prediction model performance tend to vary across studies due to differences in study characteristics & quality, participant eligibility criteria, length of follow-up, treatments received, analysis methods, etc.
+
+- A random effects approach is essential to identify unexplained heterogeneity and obtain more conservative standard errors
+- A prediction interval may help to describe potential impact of heterogeneity, and provides a range for the true prognostic effect (or prediction model’s performance) in a new study population
+- Meta-regression can be applied to investigate the impact of study-level variables on heterogeneity
+:::
+
+
+![](Picture 8.png){width=50% fig-align="right"}
+
+## Closing remarks
+
+::: {style="font-size: 0.8em"}
+Many similarities to other types of meta-analysis, however,
+
+- Data extraction more difficult
+- Heterogeneity more common
+- Summary estimates less meaningful
+
+Need to focus more on
+
+- Quantifying between-study heterogeneity
+- Assessing sources of variability in model performance
+
+**Meta-analysis of individual participant data** can resolve many issues
+:::
+
+
+## Methodological guidance
+
+![](Picture 9.png){width=100%}
+
+## Methodological guidance
+
+![](Picture 10.png){width=100%}
+
+
+## Examples of systematic reviews
+
+::: {style="font-size: 0.7em"}
+- Prediction models for diagnosis and prognosis of covid-19 infection: systematic review and critical appraisal. Wynants L, et al. BMJ. 2020.
+- Prediction models for cardiovascular disease risk in the general population: systematic review. Damen JAAG, et al. BMJ. 2016.
+- Prediction models for risk of developing type 2 diabetes: systematic literature search and independent external validation study. Abbasi A, et al. BMJ. 2012.
+- Prognostic models: a methodological framework and review of models for breast cancer. Altman DG. Cancer Invest. 2009.
+- Systematic review of prognostic models in traumatic brain injury. Perel, et al. BMC Med Inform Decis Mak. 2006.
+- Clinical and Demographic Predictors of Long-term Disability in Patients With Relapsing-Remitting Multiple Sclerosis: A Systematic Review. Langer-Gould A, et al. Arch Neurol 2006. 
+:::
+
+## Examples of meta-analysis
+
+::: {style="font-size: 0.7em"}
+- Patient- and Tumour-related Prognostic Factors for Urinary Incontinence After Radical Prostatectomy for Nonmetastatic Prostate Cancer: A Systematic Review and Meta-analysis. Lardas M, et al. Eur Urol Focus 2021.
+- Performance of the Framingham risk models and Pooled Cohort Equations: a systematic review and meta-analysis. Damen JAAG, et al. BMC Med 2017.
+- A systematic review of breast cancer incidence risk prediction models with meta-analysis of their performance. Meads, et al. Breast Cancer Res Treat 2012.
+- Performance of the original EuroSCORE. Siregar S, et al. Eur J Cardiothorac Surg 2012.
+- Evaluating the quality of research into a single prognostic biomarker: a systematic review and meta-analysis of 83 studies of C-reactive protein in stable coronary artery disease. Hemingway H, et al. PLoS Med 2010.
+:::
+
+
+## Data extraction
+
+![](Picture 11.png){width=100%}
