@@ -1,0 +1,94 @@
+---
+title: "Adding an R package to JASP: metamisc"
+author: "Thomas Debray, PhD"
+format: revealjs
+engine: knitr
+---
+
+## Prognosis
+
+Forecast of future outcomes in people with a particular health condition
+
+- *What is the risk of mortality in hospitalized COVID-19 patients?*
+- *Does age affect the risk of mortality in COVID-19 patients?*
+- *What is the risk of mortality for a particular COVID-19 patient?*
+
+![](Picture 1.png){width=100% fig-align="right"}
+
+## Prognostic model studies are common
+
+- $>350$ models for predicting cardiovascular disease
+- $>200$ models for patients with coronavirus-2019
+- $>100$ models for brain trauma patients
+- $>100$ diabetes type 2 models
+- $>60$ models for breast cancer prognosis
+
+## Need for systematic reviews
+
+- To review all existing prognostic models for a particular condition or outcome(s)
+- To summarize the predictive performance of a particular prognostic model
+- To review comparisons of competing prognostic models
+
+![](Picture 2.png){width=100% fig-align="center"}
+
+## Key steps of a systematic review
+
+1. Defining the review question 
+2. Searching for eligible studies
+3. Quantitative data extraction
+4. Critical appraissal  
+5. Meta-analysis
+
+## Meta-analysis
+
+::: {style="font-size: 0.7em"}
+
+**Aim: to produce a weighted average**
+
+A random effects meta-analysis approach is essential to allow for unexplained heterogeneity across studies, due to
+
+- Publication bias
+- Variation in study design & quality
+- Variation in inclusion criteria
+- Differences in treatments received during follow-up
+- Different types of prognostic effect measures (e.g. odds ratio and hazard ratios)
+- Different sets of adjustment factors
+:::
+
+![](Picture 3.png){width=100% fig-align="center"}
+
+
+## Case study: Meta-analysis of EuroSCORE II
+
+**Meta-analysis of the EuroSCORE II model**
+
+23 published validation studies with (incomplete) information on:
+
+- Model discrimination (c-statistic)
+- Model calibration (O:E ratio)
+
+Where possible, JASP will recover missing data from reported information. 
+
+
+## Case study: Meta-analysis of EuroSCORE II
+
+![](Picture 4.png){width=100% fig-align="center"}
+
+## Case study: Meta-analysis of EuroSCORE II
+
+**R output using metamisc**
+
+![](Picture 5.png){width=100% fig-align="center"}
+
+## Case study: Meta-analysis of EuroSCORE II
+
+![](Picture 6.png){width=100% fig-align="center"}
+
+## Case study: Meta-analysis of EuroSCORE II
+
+![](Picture 7.png){width=100% fig-align="center"}
+
+
+## ...
+
+![](Picture 8.png){width=100% fig-align="center"}
